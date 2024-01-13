@@ -858,9 +858,9 @@
             
                     
                       <!-- Page Header -->
-                      <div class="block justify-between page-header md:flex">
+                     
                           @yield('content')
-                      </div>
+                      
                       <!-- Page Header Close -->
 
 
