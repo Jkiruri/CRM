@@ -123,7 +123,7 @@
 
               <!-- Start::slide -->
               <li class="slide has-sub">
-                <a href="#" class="side-menu__item">
+                <a href="{{ url('/companies') }}" class="side-menu__item">
                   <i class="bx bx-fingerprint side-menu__icon"></i>
                   <span class="side-menu__label">Companies</span>
                   <i class="fe fe-chevron-right side-menu__angle"></i>
@@ -138,7 +138,7 @@
                     >
                   </li>
                   <li class="slide">
-                    <a href="" class="side-menu__item"
+                    <a href="{{ url('/companies/create') }}" class="side-menu__item"
                       >Add Company</a
                     >
                   </li>

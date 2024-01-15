@@ -10,7 +10,7 @@ use Illuminate\Pagination\Paginator;
 class CompanyController extends Controller
 {
     public function index()
-{
+    {
     $response = Http::get('http://localhost:8000/api/companies/');
     $companies = $response->json();
     $totalItems = count($companies);
@@ -19,10 +19,10 @@ class CompanyController extends Controller
     $companies->setPath(url('companies'));
 
     return view('companies.index', compact('companies', 'totalItems'));
-}
+    }
 
-public function paginate($items, $perPage = 4, $page = null)
-{
+    public function paginate($items, $perPage = 4, $page = null)
+    {
     $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
     $total = count($items);
     $currentPage = $page;
@@ -30,10 +30,10 @@ public function paginate($items, $perPage = 4, $page = null)
     $itemsToShow = array_slice($items, $offset, $perPage);
 
     return new LengthAwarePaginator($itemsToShow, $total, $perPage);
-}
+    }
 
-public function delete_company($id)
-{
+    public function delete_company($id)
+    {
     $response = Http::delete("http://localhost:8000/api/companies/$id");
 
     if ($response->successful()) {
@@ -41,6 +41,11 @@ public function delete_company($id)
     }
 
     return response()->json(['success' => false, 'message' => 'Failed to delete company.'], $response->status());
-}
+    }
+    public function create(){
+        return view('companies.create');
+    }
+
+
 
 }
