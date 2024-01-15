@@ -1,12 +1,13 @@
 @extends('app')
 
 @section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+<div id="your-alert-container"></div>
                         <!-- Page Header Close -->
-
                         <!-- Start::row-1 -->
                         <div class="grid grid-cols-12 gap-6">
+                            
                             <div class="xl:col-span-12 col-span-12">
                                 <div class="box custom-box">
                                     <div class="box-header flex items-center justify-between flex-wrap gap-4">
@@ -47,7 +48,7 @@
                                                 
                                                 <tbody>
                                                     @foreach ($companies as $company)
-                                                    <tr class="border border-x-0 border-defaultborder crm-contact">
+                                                    <tr class="border border-x-0 border-defaultborder crm-contact" id="tr_{{ $companies['id'] }}">
                                                         <td>
                                                             <input class="form-check-input" type="checkbox" id="checkboxNoLabel1" value="" aria-label="...">
                                                         </td>
@@ -73,15 +74,19 @@
                                                         </td>
                                                         
                                                         <td>
-                                                           {{ $company['industry'] }}
+                                                        {{ $company['industry'] }}
                                                         </td>
-                                                       
+                                            
                                                         <td>
                                                             <div class="btn-list">
-                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-warning ti-btn-icon" data-hs-overlay="#hs-overlay-contacts"><i class="ri-eye-line"></i></button>
+                                                                
                                                                 <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-info ti-btn-icon"><i class="ri-pencil-line"></i></button>
-                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-danger ti-btn-icon contact-delete"><i class="ri-delete-bin-line"></i></button>
-                                                            
+                                                                
+                                                                <a href="{{ url('/companies') }}">
+                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-danger ti-btn-icon contact-delete" onclick="deleteCompany({{ $company['id'] }})">
+                                                                <i class="ri-delete-bin-line"></i>
+                                                                </button>
+                                                            </a>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -99,20 +104,7 @@
                                             </div>
                                             <div class="ms-auto">
                                                 <nav aria-label="Page navigation" class="pagination-style-4">
-                                                    {{-- <ul class="ti-pagination mb-0">
-                                                        <li class="page-item disabled">
-                                                            <a class="page-link" href="javascript:void(0);">
-                                                                Prev
-                                                            </a>
-                                                        </li>
-                                                        <li class="page-item "><a class="page-link active" href="javascript:void(0);">1</a></li>
-                                                        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
-                                                        <li class="page-item">
-                                                            <a class="page-link text-primary" href="javascript:void(0);">
-                                                                next
-                                                            </a>
-                                                        </li>
-                                                    </ul> --}}
+                                                    
                                                     {{ $companies->links() }}
                                                 </nav>
                                             </div>
@@ -124,7 +116,35 @@
                         <!--End::row-1 -->
 
                         <!-- Start:: Contact Details Offcanvas -->
-                     
+                        
+                        
+    <script type="text/javascript">
+    function deleteCompany(id) {
+        if (confirm("Are you sure you want to delete this company?")) {
+            $.ajax({
+                url: 'http://127.0.0.1:8000/api/companies/' + id,
+                type: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                },
+                success: function (result) {
+                    // Handle success, e.g., show a message, reload the page
+                    console.log('Company deleted successfully:', result);
+                    var alertDiv = '<div class="alert alert-primary shadow-sm">Record deleted successfully</div>';
+                    $('#your-alert-container').html(alertDiv); // Replace '#your-alert-container' with the actual container where you want to show the alert
+                    location.reload(); // Reload the page
+                },
+                error: function (xhr, status, error) {
+                    // Handle error, e.g., show an alert or log the error
+                    console.error('Error deleting company:', xhr.responseText);
+                }
+            });
+        }
+    }
+</script>
+
+
+
                         <!-- End:: Contact Details Offcanvas -->
 
                         <!-- Start:: Create Contact -->

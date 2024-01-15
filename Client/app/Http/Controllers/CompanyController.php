@@ -32,4 +32,15 @@ public function paginate($items, $perPage = 4, $page = null)
     return new LengthAwarePaginator($itemsToShow, $total, $perPage);
 }
 
+public function delete_company($id)
+{
+    $response = Http::delete("http://localhost:8000/api/companies/$id");
+
+    if ($response->successful()) {
+        return response()->json(['success' => true, 'tr' => 'tr_' . $id]);
+    }
+
+    return response()->json(['success' => false, 'message' => 'Failed to delete company.'], $response->status());
+}
+
 }
