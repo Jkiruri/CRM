@@ -14,7 +14,7 @@
                                             Companies<span class="badge bg-light text-default rounded-full ms-1 text-[0.75rem] align-middle">{{ $totalItems }}</span>
                                         </div>
                                         <div class="flexflex-wrap gap-2">
-                                            <a href="javascript:void(0);" class="hs-dropdown-toggle ti-btn ti-btn-primary-full !py-1 !px-2 !text-[0.75rem]" data-hs-overlay="#todo-compose"><i class="ri-add-line font-semibold align-middle"></i>Create Contact
+                                            <a href="javascript:void(0);" class="hs-dropdown-toggle ti-btn ti-btn-primary-full !py-1 !px-2 !text-[0.75rem]" data-hs-overlay="#createCompanyModal"><i class="ri-add-line font-semibold align-middle"></i>Create Company
                                             </a>
                                             <button type="button" class="ti-btn ti-btn-success !py-1 !px-2 !text-[0.75rem] !m-0">Export As CSV</button>
                                             <div class="hs-dropdown ti-dropdown">
@@ -147,93 +147,111 @@
                         <!-- End:: Contact Details Offcanvas -->
 
                         <!-- Start:: Create Contact -->
-                        <div id="todo-compose" class="hs-overlay hidden ti-modal">
-                            <div class="hs-overlay-open:mt-7 ti-modal-box mt-0 ease-out">
-                            <div class="ti-modal-content">
-                                <div class="ti-modal-header">
-                                    <h6 class="modal-title text-[1rem] font-semibold text-defaulttextcolor" id="mail-ComposeLabel">Create Contact</h6>
-                                    <button type="button" class="hs-dropdown-toggle !text-[1rem] !font-semibold !text-defaulttextcolor" data-hs-overlay="#todo-compose">
-                                        <span class="sr-only">Close</span>
-                                        <i class="ri-close-line"></i>
-                                    </button>
-                                </div>
-                                <div class="ti-modal-body px-4">
-                                    <div class="grid grid-cols-12 gap-4">
-                                        <div class="xl:col-span-12 col-span-12">
-                                            <div class="mb-0 text-center">
-                                                <span class="avatar avatar-xxl avatar-rounded">
-                                                    <img src="build/assets/images/faces/9.jpg" alt="" id="profile-img">
-                                                    <span class="badge rounded-pill bg-primary avatar-badge">
-                                                        <input type="file" name="photo" class="absolute w-full h-full opacity-0" id="profile-change">
-                                                        <i class="fe fe-camera text-[.625rem]"></i>
-                                                    </span>
-                                                </span>
-                                            </div>
-                                        </div>
-                                        <div class="xl:col-span-6 col-span-12">
-                                            <label for="deal-title" class="form-label">Deal Title</label>
-                                            <input type="text" class="form-control" id="deal-title" placeholder="Deal Title">
-                                        </div>
-                                        <div class="xl:col-span-6 col-span-12">
-                                            <label for="contact-lead-score" class="form-label">Lead Score</label>
-                                            <input type="number" class="form-control" id="contact-lead-score" placeholder="Lead Score">
-                                        </div>
-                                        <div class="xl:col-span-12 col-span-12">
-                                            <label for="contact-mail" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="contact-mail" placeholder="Enter Email">
-                                        </div>
-                                        <div class="xl:col-span-12 col-span-12">
-                                            <label for="contact-phone" class="form-label">Phone No</label>
-                                            <input type="tel" class="form-control" id="contact-phone" placeholder="Enter Phone Number">
-                                        </div>
-                                        <div class="xl:col-span-12 col-span-12">
-                                            <label for="company-name" class="form-label">Company Name</label>
-                                            <input type="text" class="form-control" id="company-name" placeholder="Company Name">
-                                        </div>
-                                        <div class="xl:col-span-12 col-span-12">
-                                            <label class="form-label">Lead Source</label>
-                                            <select class="form-control" name="choices-multiple-remove-button1" id="choices-multiple-remove-button1">
-                                                <option value="Choice 1">Social Media</option>
-                                                <option value="Choice 2">Direct mail</option>
-                                                <option value="Choice 3">Blog Articles</option>
-                                                <option value="Choice 4">Affiliates</option>
-                                                <option value="Choice 5">Organic search</option>
-                                            </select>
-                                        </div>
-                                        <div class="xl:col-span-6 col-span-12">
-                                            <label class="form-label">Last Contacted</label>
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-text text-[#8c9097] dark:text-white/50"> <i class="ri-calendar-line"></i> </div>
-                                                    <input type="text" class="form-control" id="targetDate" placeholder="Choose date and time">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="xl:col-span-6 col-span-12">
-                                            <label class="form-label">Tags</label>
-                                            <select class="form-control" name="choices-multiple-remove-button2" id="choices-multiple-remove-button2" multiple>
-                                                <option value="">Select Tag</option>
-                                                <option value="Choice 1">New Lead</option>
-                                                <option value="Choice 2">Prospect</option>
-                                                <option value="Choice 3">Customer</option>
-                                                <option value="Choice 4">Hot Lead</option>
-                                                <option value="Choice 5">Partner</option>
-                                                <option value="Choice 6">LostCustomer</option>
-                                                <option value="Choice 7">Influencer</option>
-                                                <option value="Choice 8">Subscriber</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ti-modal-footer">
-                                    <button type="button"
-                                    class="hs-dropdown-toggle ti-btn  ti-btn-light align-middle"
-                                    data-hs-overlay="#todo-compose">
-                                    Cancel
-                                </button>
-                                    <button type="button" class="ti-btn bg-primary text-white !font-medium">Create Contact</button>
-                                </div>
-                            </div>
-                            </div>
-                        </div>
+       <div id="createCompanyModal" class="hs-overlay hidden ti-modal">
+    <div class="hs-overlay-open:mt-7 ti-modal-box mt-0 ease-out">
+        <div class="ti-modal-content">
+            <div class="ti-modal-header">
+                <h6 class="modal-title text-[1rem] font-semibold text-defaulttextcolor" id="createCompanyLabel">Create Company</h6>
+                <button type="button" class="hs-dropdown-toggle !text-[1rem] !font-semibold !text-defaulttextcolor" data-hs-overlay="#createCompanyModal">
+                    <span class="sr-only">Close</span>
+                    <i class="ri-close-line"></i>
+                </button>
+            </div>
+            <div class="ti-modal-body px-4">
+                <div class="grid grid-cols-12 gap-4">
+                    <div class="xl:col-span-12 col-span-12">
+                        <label for="companyName" class="form-label">Company Name</label>
+                        <input type="text" class="form-control" id="companyName" placeholder="Enter Company Name">
+                    </div>
+                    <div class="xl:col-span-12 col-span-12">
+                        <label for="companyEmail" class="form-label">Company Email</label>
+                        <input type="email" class="form-control" id="companyEmail" placeholder="Enter Email">
+                    </div>
+                    <div class="xl:col-span-12 col-span-12">
+                        <label for="companyIndustry" class="form-label">Company Industry</label>
+                        <input type="text" class="form-control" id="companyIndustry" placeholder="Enter Industry">
+                    </div>
+                    <div class="xl:col-span-12 col-span-12">
+                        <label for="companyPhone" class="form-label">Company Phone Number</label>
+                        <input type="text" class="form-control" id="companyPhone" placeholder="Enter Phone Number">
+                    </div>
+                    <!-- Add other fields as needed -->
+
+                </div>
+            </div>
+            <div class="ti-modal-footer">
+                <button type="button" class="hs-dropdown-toggle ti-btn ti-btn-light align-middle" data-hs-overlay="#createCompanyModal">
+                    Cancel
+                </button>
+                <button type="button" class="ti-btn bg-primary text-white !font-medium" onclick="createCompany()">Create Company</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<script>
+    
+    function createCompany() {
+        // Get form data
+        let formData = {
+            name: document.getElementById('companyName').value,
+            email: document.getElementById('companyEmail').value,
+            industry: document.getElementById('companyIndustry').value,
+            phone: document.getElementById('companyPhone').value,
+            // Add other fields as needed
+        };
+
+        // Make a POST request using Axios
+        axios.post('http://127.0.0.1:8000/api/companies', formData)
+            .then(function (response) {
+                console.log(response.data);
+                showSuccessAlert();
+                clearForm();
+                // Reload the page after a short delay
+                setTimeout(function () {
+                    location.reload();
+                }, 2000);
+            })
+            .catch(function (error) {
+                console.error('Error creating company:', error);
+                alert('Failed to create company. Please check the console for details.');
+            });
+    }
+
+    function clearForm() {
+        // Clear the form fields
+        document.getElementById('companyName').value = '';
+        document.getElementById('companyEmail').value = '';
+        document.getElementById('companyIndustry').value = '';
+        document.getElementById('companyPhone').value = '';
+        // Clear other fields as needed
+    }
+
+    function showSuccessAlert() {
+        // Close the modal
+        let createCompanyModal = document.getElementById('createCompanyModal');
+        if (createCompanyModal) {
+            createCompanyModal.classList.remove('hs-overlay-open');
+        }
+
+        // Create an alert element
+        let alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-primary';
+        alertDiv.role = 'alert';
+        alertDiv.innerText = 'Company created successfully!';
+
+        // Append the alert to the body
+        document.getElementById('your-alert-container').appendChild(alertDiv);
+
+        // Reload the page after a short delay
+        setTimeout(function () {
+            location.reload();
+        }, 2000);
+    }
+
+
+</script>
+
+
 @endsection

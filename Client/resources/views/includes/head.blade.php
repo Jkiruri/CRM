@@ -46,4 +46,5 @@
     <script src="{{ asset('assets/main.js') }}"></script>
     <link href="{{ asset('assets/bootstrap.min.css') }}" rel="stylesheet"  crossorigin="anonymous">
     <script src="{{ asset('assets/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ asset('assets/axios.min.js') }}"></script>
   </head>

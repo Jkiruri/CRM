@@ -15,7 +15,7 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        return Company::all();
+        return Company::orderBy('created_at', 'desc')->get();
     }
 
     /**

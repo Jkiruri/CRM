@@ -777,7 +777,7 @@
           </div>
           <div class="menu-image theme-colors">
             <p class="switcher-style-head">Menu With Background Image:</p>
-            <div
+            <divf
               class="flex switcher-style space-x-3 rtl:space-x-reverse flex-wrap gap-3"
             >
               <div class="ti-form-radio switch-select">
@@ -820,7 +820,7 @@
                   id="switcher-bg-img4"
                 />
               </div>
-            </div>
+            </divf>
           </div>
         </div>
       </div>
@@ -830,7 +830,7 @@
 
     <!-- LOADER -->
     <div id="loader">
-      <img src="./assets/images/media/loader.svg" alt="" />
+      <img src="{{ asset('assets/images/media/loader.svg') }}" alt="" />
     </div>
     <!-- END LOADER -->
 
@@ -1088,49 +1088,48 @@
     <div id="responsive-overlay"></div>
 
     <!-- PRELINE JS -->
-    <script src="./assets/libs/preline/preline.js"></script>
-
+    <script src="{{ asset('assets/libs/preline/preline.js') }}"></script>
     <!-- POPPER JS -->
-    <script src="./assets/libs/@popperjs/core/umd/popper.min.js"></script>
+    <script src="{{ asset('assets/libs/@popperjs/core/umd/popper.min.js') }}"></script>
 
     <!-- COLOR PICKER JS -->
-    <script src="./assets/libs/@simonwep/pickr/pickr.es5.min.js"></script>
+    <script src="{{ asset('assets/libs/@simonwep/pickr/pickr.es5.min.js') }}"></script>
 
     <!-- SWITCH JS -->
-    <link rel="modulepreload" href="./assets/switch-8d0a5268.js" />
-    <script type="module" src="./assets/switch-8d0a5268.js"></script>
+    <link rel="modulepreload" href="{{ asset('assets/switch-8d0a5268.js') }}" />
+    <script type="module" src="{{ asset('assets/switch-8d0a5268.js') }}"></script>
 
     <!-- SIMPLEBAR JS -->
-    <script src="./assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
 
     <!-- JSVector Maps JS -->
-    <script src="./assets/libs/jsvectormap/js/jsvectormap.min.js"></script>
+    <script src="{{ asset('assets/libs/jsvectormap/js/jsvectormap.min.js') }}"></script>
 
     <!-- JSVector Maps MapsJS -->
-    <script src="./assets/libs/jsvectormap/maps/world-merc.js"></script>
+    <script src="{{ asset('assets/libs/jsvectormap/maps/world-merc.js') }}"></script>
 
     <!-- Apex Charts JS -->
-    <script src="./assets/libs/apexcharts/apexcharts.min.js"></script>
+    <script src="{{ asset('assets/libs/apexcharts/apexcharts.min.js') }}"></script>
 
     <!-- Chartjs Chart JS -->
-    <script src="./assets/libs/chart.js/chart.min.js"></script>
+    <script src="{{ asset('assets/libs/chart.js/chart.min.js') }}"></script>
 
     <!-- CRM-Dashboard -->
-    <link rel="modulepreload" href="./assets/crm-dashboard-5975eef2.js" />
-    <script type="module" src="./assets/crm-dashboard-5975eef2.js"></script>
+    <link rel="modulepreload" href="{{ asset('assets/crm-dashboard-5975eef2.js') }}" />
+    <script type="module" src="{{ asset('assets/crm-dashboard-5975eef2.js') }}"></script>
 
     <!-- STICKY JS -->
-    <script src="./assets/sticky.js"></script>
+    <script src="{{ asset('assets/sticky.js') }}"></script>
 
     <!-- APP JS -->
-    <link rel="modulepreload" href="./assets/app-cff42aa7.js" />
-    <script type="module" src="./assets/app-cff42aa7.js"></script>
+    <link rel="modulepreload" href="{{ asset('assets/app-cff42aa7.js') }}" />
+    <script type="module" src="{{ asset('assets/app-cff42aa7.js') }}"></script>
 
     <!-- CUSTOM-SWITCHER JS -->
-    <link rel="modulepreload" href="./assets/custom-switcher-508a7845.js" />
+    <link rel="modulepreload" href="{{ asset('assets/custom-switcher-508a7845.js') }}" />
     <script
       type="module"
-      src="./assets/custom-switcher-508a7845.js"
+      src="{{ asset('assets/custom-switcher-508a7845.js') }}"
     ></script>
 
     <!-- END SCRIPTS -->
