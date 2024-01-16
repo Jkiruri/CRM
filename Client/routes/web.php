@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,3 +23,7 @@ Route::controller(CompanyController::class)->group(function () {
     Route::get('/companies/create', 'create');
 });
 route::delete('http://127.0.0.1:8000/api/companies/{id}',[CompanyController::class,'delete_company']);
+Route::controller(ContactController::class)->group(function () {
+    Route::get('/contacts', 'index');
+    Route::get('/contact/create', 'create');
+});
