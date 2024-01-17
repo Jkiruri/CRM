@@ -62,7 +62,7 @@
 
               <!-- Start::slide -->
               <li class="slide has-sub">
-                <a href="{{ url('/companies') }}" class="side-menu__item">
+                <a href="{{ url('/') }}" class="side-menu__item">
                   <i class="bx bx-home side-menu__icon"></i>
                   <span class="side-menu__label"
                     >Dashboard
@@ -70,7 +70,7 @@
                 </a>
                 <ul class="slide-menu child1">
                   <li class="slide side-menu__label1">
-                    <a href="{{ url('/companies') }}">Dashboard</a>
+                    <a href="{{ url('/') }}">Dashboard</a>
                   </li>
               
                 </ul>
@@ -159,12 +159,12 @@
                     <a href="javascript:void(0);">Contacts</a>
                   </li>
                   <li class="slide">
-                    <a href="" class="side-menu__item"
+                    <a href="{{ url('/contacts') }}" class="side-menu__item"
                       >Contact List</a
                     >
                   </li>
                   <li class="slide">
-                    <a href="" class="side-menu__item"
+                    <a href="{{ url('/contacts/create') }}" class="side-menu__item"
                       >Add Contact</a
                     >
                   </li>

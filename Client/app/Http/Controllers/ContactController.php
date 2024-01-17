@@ -31,26 +31,11 @@ class ContactController extends Controller
     }
     
 
-    // public function index()
-    // {
-    // $response = Http::get('http://localhost:8000/api/contacts/');
-    // $contacts = $response->json();
-    // $totalItems = count($contacts);
+    public function create (){
 
-    // $contacts = $this->paginate($contacts, 10);
-    // $contacts->setPath(url('contacts'));
+    $response = Http::get('http://localhost:8000/api/companies');
+    $companies = $response->json();
 
-    // return view('contacts.index', compact('contacts', 'totalItems'));
-    // }
-
-    // public function paginate($items, $perPage = 4, $page = null)
-    // {
-    // $page = $page ?: (Paginator::resolveCurrentPage() ?: 1);
-    // $total = count($items);
-    // $currentPage = $page;
-    // $offset = ($currentPage * $perPage) - $perPage;
-    // $itemsToShow = array_slice($items, $offset, $perPage);
-
-    // return new LengthAwarePaginator($itemsToShow, $total, $perPage);
-    // }
+    return view('contacts.create', compact('companies'));
+    }
 }

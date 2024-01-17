@@ -10,7 +10,7 @@
                                             Contacts<span class="badge bg-light text-default rounded-full ms-1 text-[0.75rem] align-middle">{{ $totalItems }}</span>
                                         </div>
                                         <div class="flexflex-wrap gap-2">
-                                            <a href="javascript:void(0);" class="hs-dropdown-toggle ti-btn ti-btn-primary-full !py-1 !px-2 !text-[0.75rem]" data-hs-overlay="#createCompanyModal"><i class="ri-add-line font-semibold align-middle"></i>Create Company
+                                            <a href="{{ url('/contacts/create') }}" class="hs-dropdown-toggle ti-btn ti-btn-primary-full !py-1 !px-2 !text-[0.75rem]" data-hs-overlay="#createCompanyModal"><i class="ri-add-line font-semibold align-middle"></i>Create Contact
                                             </a>
                                             <button type="button" class="ti-btn ti-btn-success !py-1 !px-2 !text-[0.75rem] !m-0">Export As CSV</button>
                                             <div class="hs-dropdown ti-dropdown">

@@ -25,5 +25,5 @@ Route::controller(CompanyController::class)->group(function () {
 route::delete('http://127.0.0.1:8000/api/companies/{id}',[CompanyController::class,'delete_company']);
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contacts', 'index');
-    Route::get('/contact/create', 'create');
+    Route::get('/contacts/create', 'create');
 });

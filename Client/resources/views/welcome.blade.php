@@ -2,14 +2,15 @@
 
 @section('content')
 
-<div
+          <!-- Start::page-header -->
+          <div
             class="md:flex block items-center justify-between my-[1.5rem] page-header-breadcrumb"
           >
             <div>
               <p
                 class="font-semibold text-[1.125rem] text-defaulttextcolor dark:text-defaulttextcolor/70 !mb-0"
               >
-                Welcome back, Json Taylor !
+                Welcome back, Brian Mwangi !
               </p>
               <p
                 class="font-normal text-[#8c9097] dark:text-white/50 text-[0.813rem]"
@@ -122,7 +123,7 @@
                                   class="inline-flex items-center justify-center"
                                 >
                                   <img
-                                    src="build/assets/images/faces/10.jpg"
+                                    src="{{ asset('assets/images/faces/10.jpg') }}"
                                     alt=""
                                     class="w-[1.75rem] h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                   />
@@ -132,16 +133,14 @@
                                 <p
                                   class="font-semibold mb-[1.4px] text-[0.813rem]"
                                 >
-                                  Michael Jordan
+                                  Elizabeth Muita
                                 </p>
                                 <p
                                   class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
-                                >
-                                  michael.jordan@example.com
-                                </p>
+                                ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
-                                $2,893
+                                Ksh.200,893
                               </div>
                             </div>
                           </li>
@@ -158,16 +157,14 @@
                                 <p
                                   class="font-semibold mb-[1.4px] text-[0.813rem]"
                                 >
-                                  Emigo Kiaren
+                                  John Kuria
                                 </p>
                                 <p
                                   class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
-                                >
-                                  emigo.kiaren@gmail.com
-                                </p>
+                                ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
-                                $4,289
+                                Ksh. 400,289
                               </div>
                             </div>
                           </li>
@@ -178,7 +175,7 @@
                                   class="inline-flex items-center justify-center"
                                 >
                                   <img
-                                    src="build/assets/images/faces/12.jpg"
+                                    src="{{ asset('assets/images/faces/12.jpg') }}"
                                     alt=""
                                     class="!w-[1.75rem] !h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                   />
@@ -188,16 +185,14 @@
                                 <p
                                   class="font-semibold mb-[1.4px] text-[0.813rem]"
                                 >
-                                  Randy Origoan
+                                  Randy Maina
                                 </p>
                                 <p
                                   class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
-                                >
-                                  randy.origoan@gmail.com
-                                </p>
+                                ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
-                                $6,347
+                                Ksh. 600,347
                               </div>
                             </div>
                           </li>
@@ -214,16 +209,14 @@
                                 <p
                                   class="font-semibold mb-[1.4px] text-[0.813rem]"
                                 >
-                                  George Pieterson
+                                  David Mukera
                                 </p>
                                 <p
                                   class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
-                                >
-                                  george.pieterson@gmail.com
-                                </p>
+                                ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
-                                $3,894
+                                Ksh.300,894
                               </div>
                             </div>
                           </li>
@@ -240,16 +233,14 @@
                                 <p
                                   class="font-semibold mb-[1.4px] text-[0.813rem]"
                                 >
-                                  Kiara Advain
+                                  Kennedy Mundia
                                 </p>
                                 <p
                                   class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
-                                >
-                                  kiaraadvain214@gmail.com
-                                </p>
+                                ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
-                                $2,679
+                                Ksh. 200,679
                               </div>
                             </div>
                           </li>
@@ -719,22 +710,22 @@
                                     class="!me-2 inline-flex justify-center items-center"
                                   >
                                     <img
-                                      src="build/assets/images/faces/4.jpg"
+                                      src="{{ asset('assets/images/faces/4.jpg') }}"
                                       alt="img"
                                       class="w-[1.75rem] h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                     /> </span
-                                  >Mayor Kelly
+                                  >Hildah Kiugu
                                 </div>
                               </td>
                               <td>Manufacture</td>
-                              <td>mayorkelly@gmail.com</td>
+                              <td>hkiugu@gmail.com</td>
                               <td>
                                 <span
                                   class="inline-flex text-info !py-[0.15rem] !px-[0.45rem] rounded-sm !font-semibold !text-[0.75em] bg-info/10"
                                   >Germany</span
                                 >
                               </td>
-                              <td>Sep 15 - Oct 12, 2023</td>
+                              <td>Sep 15 - Present</td>
                               <td>
                                 <div
                                   class="flex flex-row items-center !gap-2 text-[0.9375rem]"
@@ -773,15 +764,15 @@
                                     class="inline-flex justify-center items-center me-2"
                                   >
                                     <img
-                                      src="build/assets/images/faces/15.jpg"
+                                      src="{{ asset('assets/images/faces/15.jpg') }}"
                                       alt="img"
                                       class="w-[1.75rem] h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                     /> </span
-                                  >Andrew Garfield
+                                  >Elton Kisesa
                                 </div>
                               </td>
                               <td>Development</td>
-                              <td>andrewgarfield@gmail.com</td>
+                              <td>EKisesa@gmail.com</td>
                               <td>
                                 <span
                                   class="inline-flex text-primary !py-[0.15rem] !px-[0.45rem] rounded-sm !font-semibold !text-[0.75em] bg-primary/10"
@@ -826,22 +817,22 @@
                                     class="inline-flex justify-center items-center me-2"
                                   >
                                     <img
-                                      src="build/assets/images/faces/11.jpg"
+                                      src="{{ asset('assets/images/faces/11.jpg') }}"
                                       alt="img"
                                       class="w-[1.75rem] h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                     /> </span
-                                  >Simon Cowel
+                                  >Simon Maito
                                 </div>
                               </td>
                               <td>Service</td>
-                              <td>simoncowel234@gmail.com</td>
+                              <td>simon254@gmail.com</td>
                               <td>
                                 <span
                                   class="inline-flex text-danger !py-[0.15rem] !px-[0.45rem] rounded-sm !font-semibold !text-[0.75em] bg-danger/10"
                                   >Europe</span
                                 >
                               </td>
-                              <td>Sep 15 - Oct 12, 2023</td>
+                              <td>Sep 15 - Present</td>
                               <td>
                                 <div
                                   class="flex flex-row items-center !gap-2 text-[0.9375rem]"
@@ -880,22 +871,22 @@
                                     class="inline-flex justify-center items-center me-2"
                                   >
                                     <img
-                                      src="build/assets/images/faces/8.jpg"
+                                      src="{{ asset('assets/images/faces/8.jpg') }}"
                                       alt="img"
                                       class="w-[1.75rem] h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                     /> </span
-                                  >Mirinda Hers
+                                  >Mirinda Muthoni
                                 </div>
                               </td>
                               <td>Marketing</td>
-                              <td>mirindahers@gmail.com</td>
+                              <td>mirindamuthoni@gmail.com</td>
                               <td>
                                 <span
                                   class="inline-flex text-warning !py-[0.15rem] !px-[0.45rem] rounded-sm !font-semibold !text-[0.75em] bg-warning/10"
                                   >USA</span
                                 >
                               </td>
-                              <td>Apr 14 - Dec 14, 2023</td>
+                              <td>Apr 14 - Present</td>
                               <td>
                                 <div
                                   class="flex flex-row items-center !gap-2 text-[0.9375rem]"
@@ -934,15 +925,15 @@
                                     class="inline-flex justify-center items-center me-2"
                                   >
                                     <img
-                                      src="build/assets/images/faces/9.jpg"
+                                      src="{{ asset('assets/images/faces/9.jpg') }}"
                                       alt="img"
                                       class="w-[1.75rem] h-[1.75rem] leading-[1.75rem] text-[0.65rem] rounded-full"
                                     /> </span
-                                  >Jacob Smith
+                                  >Jacob Rimui
                                 </div>
                               </td>
                               <td>Social Plataform</td>
-                              <td>jacobsmith@gmail.com</td>
+                              <td>jacobrimui@gmail.com</td>
                               <td>
                                 <span
                                   class="inline-flex text-success !py-[0.15rem] !px-[0.45rem] rounded-sm !font-semibold !text-[0.75em] bg-success/10"
