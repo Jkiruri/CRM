@@ -87,7 +87,7 @@
               <!-- End::slide -->
 
               <!-- Start::slide -->
-              <li class="slide has-sub">
+              {{-- <li class="slide has-sub">
                 <a href="javascript:void(0);" class="side-menu__item">
                   <i class="bx bx-task side-menu__icon"></i>
                   <span class="side-menu__label"
@@ -118,7 +118,7 @@
                     >
                   </li>
                 </ul>
-              </li>
+              </li> --}}
               <!-- End::slide -->
 
               <!-- Start::slide -->
@@ -181,30 +181,53 @@
 
               <!-- Start::slide -->
               <li class="slide has-sub">
-                <a href="#" class="side-menu__item">
+                <a href="javascript:void(0);" class="side-menu__item">
                   <i class="bx bx-box side-menu__icon"></i>
                   <span class="side-menu__label">Leads</span>
                   <i class="fe fe-chevron-right side-menu__angle"></i>
                 </a>
                 <ul class="slide-menu child1 mega-menu">
                   <li class="slide side-menu__label1">
-                    <a href="#">Leads</a>
+                    <a href="javascript:void(0);">Leads</a>
                   </li>
                   <li class="slide">
-                    <a href="#" class="side-menu__item"
-                      >Add Lead</a
+                    <a href="{{ url('/leads') }}" class="side-menu__item"
+                      >View Leads</a
                     >
                   </li>
+                  
                   <li class="slide">
-                    <a href="#" class="side-menu__item"
-                      >View Leads</a
+                    <a href="{{ url('/leads/create') }}" class="side-menu__item"
+                      >Add Lead</a
                     >
                   </li>
                   
                 </ul>
               </li>
               <!-- End::slide -->
-
+              <li class="slide has-sub">
+                <a href="javascript:void(0);" class="side-menu__item">
+                  <i class="bx bx-box side-menu__icon"></i>
+                  <span class="side-menu__label">Deals</span>
+                  <i class="fe fe-chevron-right side-menu__angle"></i>
+                </a>
+                <ul class="slide-menu child1 mega-menu">
+                  <li class="slide side-menu__label1">
+                    <a href="javascript:void(0);">Deals</a>
+                  </li>
+                  <li class="slide">
+                    <a href="{{ url('/deals') }}" class="side-menu__item"
+                      >View Deals</a
+                    >
+                  </li>
+                  <li class="slide">
+                    <a href="{{ url('/deals/create') }}" class="side-menu__item"
+                      >Add Deal</a
+                    >
+                  </li>
+                  
+                </ul>
+              </li>
               <!-- Start::slide -->
               <li class="slide has-sub">
                 <a href="#" class="side-menu__item">

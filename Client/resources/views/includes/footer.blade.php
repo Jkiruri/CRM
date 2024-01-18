@@ -5,7 +5,7 @@
           <span class="text-gray dark:text-defaulttextcolor/50">
             Copyright © <span id="year"></span>
             <a
-              href="javascript:void(0);"
+              href="/"
               class="text-defaulttextcolor font-semibold dark:text-defaulttextcolor"
               >JCRM</a
             >. 

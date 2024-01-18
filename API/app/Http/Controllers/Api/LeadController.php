@@ -26,9 +26,8 @@ class LeadController extends Controller
             ... $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
-            'job_title' => 'required|string|max:255',
             'email' => 'required|email',
-            'phone' => 'required|string',
+            'status' => 'required|string',
             'company_id' => 'required|exists:companies,id'
             ]),
             

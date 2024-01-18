@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DealController;
+use App\Http\Controllers\LeadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,4 +28,12 @@ route::delete('http://127.0.0.1:8000/api/companies/{id}',[CompanyController::cla
 Route::controller(ContactController::class)->group(function () {
     Route::get('/contacts', 'index');
     Route::get('/contacts/create', 'create');
+});
+Route::controller(LeadController::class)->group(function () {
+    Route::get('/leads', 'index');
+    Route::get('/leads/create', 'create');
+});
+Route::controller(DealController::class)->group(function () {
+    Route::get('/deals', 'index');
+    Route::get('/deals/create', 'create');
 });
