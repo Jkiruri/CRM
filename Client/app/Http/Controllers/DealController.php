@@ -11,7 +11,12 @@ class DealController extends Controller
 {
     public function index()
     {
-        $response = Http::get('http://localhost:8000/api/deals/');
+        $sanctumToken = env('SANCTUM_TOKEN');
+
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer ' . $sanctumToken,
+            'Accept' => 'application/json',
+        ])->get('http://localhost:8000/api/deals/');
         $responseData = $response->json();
 
         // Check if 'data' key exists in the response
@@ -32,11 +37,20 @@ class DealController extends Controller
     public function create()
 {
     // Fetch companies
-    $companiesResponse = Http::get('http://localhost:8000/api/companies');
+    $sanctumToken = env('SANCTUM_TOKEN');
+
+    $companiesResponse = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/companies/');
     $companies = $companiesResponse->json();
 
     // Fetch contacts
-    $contactsResponse = Http::get('http://localhost:8000/api/contacts');
+    $contactsResponse = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/contacts/');
+    
     $contacts = $contactsResponse->json();
 
     return view('deals.create', compact('companies', 'contacts'));

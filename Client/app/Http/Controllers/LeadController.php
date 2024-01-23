@@ -10,7 +10,12 @@ class LeadController extends Controller
 {
     public function index()
     {
-        $response = Http::get('http://localhost:8000/api/leads/');
+        $sanctumToken = env('SANCTUM_TOKEN');
+
+        $response = Http::withHeaders([
+            'Authorization' => 'Bearer ' . $sanctumToken,
+            'Accept' => 'application/json',
+        ])->get('http://localhost:8000/api/leads/');
         $responseData = $response->json();
 
         // Check if 'data' key exists in the response
@@ -30,7 +35,12 @@ class LeadController extends Controller
     }
     public function create (){
 
-    $response = Http::get('http://localhost:8000/api/companies');
+    $sanctumToken = env('SANCTUM_TOKEN');
+
+    $response = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/companies/');
     $companies = $response->json();
 
     return view('leads.create', compact('companies'));

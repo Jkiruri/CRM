@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\CompanyController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -14,11 +13,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
 Route::get('/', function () {
     return view('app');
-});
-Route::controller(CompanyController::class)->group(function () {
-    Route::get('/companies', 'index');
-    Route::post('/orders', 'store');
 });

@@ -11,7 +11,12 @@ class ContactController extends Controller
 
     public function index()
     {
-        $response = Http::get('http://localhost:8000/api/contacts/');
+    $sanctumToken = env('SANCTUM_TOKEN');
+
+    $response = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/contacts/');
         $responseData = $response->json();
 
         // Check if 'data' key exists in the response
@@ -33,7 +38,12 @@ class ContactController extends Controller
 
     public function create (){
 
-    $response = Http::get('http://localhost:8000/api/companies');
+    $sanctumToken = env('SANCTUM_TOKEN');
+
+    $response = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/companies/');
     $companies = $response->json();
 
     return view('contacts.create', compact('companies'));

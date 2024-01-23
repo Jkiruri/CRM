@@ -11,7 +11,15 @@ class CompanyController extends Controller
 {
     public function index()
     {
-    $response = Http::get('http://localhost:8000/api/companies/');
+
+// Assuming you have obtained the Sanctum token somehow
+    $sanctumToken = env('SANCTUM_TOKEN');
+
+    $response = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/companies/');
+
     $companies = $response->json();
     $totalItems = count($companies);
 
