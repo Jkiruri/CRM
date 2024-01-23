@@ -31,3 +31,9 @@ Route::apiResource('companies', CompanyController::class);
 Route::apiResource('contacts', ContactController::class);
 Route::apiResource('deals', DealController::class);
 Route::apiResource('leads', LeadController::class);
+
+Route::fallback(function () {
+    return response()->json([
+        'message' => 'Not Found'
+    ], 404);
+})->name('api.fallback');

@@ -35,25 +35,30 @@
     function submitForm() {
         // Get form data
         let formData = new FormData(document.getElementById('createCompanyForm'));
-
+        let sanctumToken = '3|EFL6xpzCsZ6clMB4MJZSojjgrihvXw0pfTcUUbqKfbe9486c';
         // Make a POST request using Axios
         axios.post('http://127.0.0.1:8000/api/companies', formData, {
-            headers: {
-                'Content-Type': 'multipart/form-data',
-            },
+        headers: {
+            'Content-Type': 'multipart/form-data',
+            'Authorization': `Bearer ${sanctumToken}`,
+        },
         })
         .then(function (response) {
             console.log(response.data);
             alert('Company created successfully!');
             clearForm(); // Clear the form
             showSuccessAlert(); // Show the success alert
+            redirectToCompanies();
         })
         .catch(function (error) {
             console.error('Error creating company:', error);
             alert('Failed to create company. Please check the console for details.');
         });
     }
-
+    function redirectToCompanies() {
+        // Redirect to the "/companies" page
+        window.location.href = '/companies';
+    }
     function clearForm() {
         // Clear all input fields in the form
         document.getElementById('createCompanyForm').reset();

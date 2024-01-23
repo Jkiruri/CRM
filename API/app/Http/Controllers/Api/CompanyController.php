@@ -45,8 +45,12 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        return $company;
+    if (!$company) {
+        return response()->json(['error' => 'Company not found'], 404);
     }
+
+    return $company;
+}
 
     /**
      * Update the specified resource in storage.
