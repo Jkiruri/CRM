@@ -18,8 +18,9 @@ class LeadController extends Controller
     } 
     public function index()
     {
-        return LeadResource::collection(Lead::with('company')->get());
+    return LeadResource::collection(Lead::with('company')->orderBy('created_at', 'desc')->get());
     }
+
 
     /**
      * Store a newly created resource in storage.

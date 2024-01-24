@@ -62,7 +62,7 @@
                   aria-label="button"
                   type="button"
                   data-hs-overlay="#search-modal"
-                  class="inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium focus:ring-offset-0 focus:ring-offset-white transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                  class="inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium focus:ring-offset-0 focus:ring-offset-white transition-all text-xs"
                 >
                   <i class="bx bx-search-alt-2 header-link-icon"></i>
                 </button>
@@ -78,7 +78,7 @@
               >
                 <a
                   aria-label="anchor"
-                  class="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium transition-all text-xs dark:bg-bgdark dark:hover:bg-black/20 dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                  class="hs-dark-mode-active:hidden flex hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium transition-all text-xs"
                   href="javascript:void(0);"
                   data-hs-theme-click-value="dark"
                 >
@@ -86,7 +86,7 @@
                 </a>
                 <a
                   aria-label="anchor"
-                  class="hs-dark-mode-active:flex hidden hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium text-defaulttextcolor transition-all text-xs dark:bg-bodybg dark:bg-bgdark dark:hover:bg-black/20 dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                  class="hs-dark-mode-active:flex hidden hs-dark-mode group flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium text-defaulttextcolor transition-all text-xs"
                   href="javascript:void(0);"
                   data-hs-theme-click-value="light"
                 >
@@ -131,7 +131,7 @@
                     class="ti-dropdown-header !m-0 !p-4 !bg-transparent flex justify-between items-center"
                   >
                     <p
-                      class="mb-0 text-[1.0625rem] text-defaulttextcolor font-semibold dark:text-[#8c9097] dark:text-white/50"
+                      class="mb-0 text-[1.0625rem] text-defaulttextcolor font-semibold"
                     >
                       Notifications
                     </p>
@@ -157,14 +157,14 @@
                         <div class="grow flex items-center justify-between">
                           <div>
                             <p
-                              class="mb-0 text-defaulttextcolor dark:text-[#8c9097] dark:text-white/50 text-[0.8125rem] font-semibold"
+                              class="mb-0 text-defaulttextcolor text-[0.8125rem] font-semibold"
                             >
                               <a href="notifications.html"
                                 >Your Order Has Been Shipped</a
                               >
                             </p>
                             <span
-                              class="text-[#8c9097] dark:text-white/50 font-normal text-[0.75rem] header-notification-text"
+                              class="text-[#8c9097] font-normal text-[0.75rem] header-notification-text"
                               >Order No: 123456 Has Shipped To Your Delivery
                               Address</span
                             >
@@ -173,7 +173,7 @@
                             <a
                               aria-label="anchor"
                               href="javascript:void(0);"
-                              class="min-w-fit text-[#8c9097] dark:text-white/50 me-1 dropdown-item-close1"
+                              class="min-w-fit text-[#8c9097] me-1 dropdown-item-close1"
                               ><i class="ti ti-x text-[1rem]"></i
                             ></a>
                           </div>
@@ -191,14 +191,14 @@
                         <div class="grow flex items-center justify-between">
                           <div>
                             <p
-                              class="mb-0 text-defaulttextcolor dark:text-[#8c9097] dark:text-white/50 text-[0.8125rem] font-semibold"
+                              class="mb-0 text-defaulttextcolor text-[0.8125rem] font-semibold"
                             >
                               <a href="notifications.html"
                                 >Discount Available</a
                               >
                             </p>
                             <span
-                              class="text-[#8c9097] dark:text-white/50 font-normal text-[0.75rem] header-notification-text"
+                              class="text-[#8c9097] font-normal text-[0.75rem] header-notification-text"
                               >Discount Available On Selected Products</span
                             >
                           </div>
@@ -206,7 +206,7 @@
                             <a
                               aria-label="anchor"
                               href="javascript:void(0);"
-                              class="min-w-fit text-[#8c9097] dark:text-white/50 me-1 dropdown-item-close1"
+                              class="min-w-fit text-[#8c9097] me-1 dropdown-item-close1"
                               ><i class="ti ti-x text-[1rem]"></i
                             ></a>
                           </div>
@@ -224,14 +224,14 @@
                         <div class="grow flex items-center justify-between">
                           <div>
                             <p
-                              class="mb-0 text-defaulttextcolor dark:text-[#8c9097] dark:text-white/50 text-[0.8125rem] font-semibold"
+                              class="mb-0 text-defaulttextcolor text-[0.8125rem] font-semibold"
                             >
                               <a href="notifications.html"
                                 >Account Has Been Verified</a
                               >
                             </p>
                             <span
-                              class="text-[#8c9097] dark:text-white/50 font-normal text-[0.75rem] header-notification-text"
+                              class="text-[#8c9097] font-normal text-[0.75rem] header-notification-text"
                               >Your Account Has Been Verified Sucessfully</span
                             >
                           </div>
@@ -239,7 +239,7 @@
                             <a
                               aria-label="anchor"
                               href="javascript:void(0);"
-                              class="min-w-fit text-[#8c9097] dark:text-white/50 me-1 dropdown-item-close1"
+                              class="min-w-fit text-[#8c9097] me-1 dropdown-item-close1"
                               ><i class="ti ti-x text-[1rem]"></i
                             ></a>
                           </div>
@@ -257,7 +257,7 @@
                         <div class="grow flex items-center justify-between">
                           <div>
                             <p
-                              class="mb-0 text-defaulttextcolor dark:text-[#8c9097] dark:text-white/50 text-[0.8125rem] font-semibold"
+                              class="mb-0 text-defaulttextcolor text-[0.8125rem] font-semibold"
                             >
                               <a href="notifications.html"
                                 >Order Placed
@@ -267,7 +267,7 @@
                               >
                             </p>
                             <span
-                              class="text-[#8c9097] dark:text-white/50 font-normal text-[0.75rem] header-notification-text"
+                              class="text-[#8c9097] font-normal text-[0.75rem] header-notification-text"
                               >Order Placed Successfully</span
                             >
                           </div>
@@ -275,7 +275,7 @@
                             <a
                               aria-label="anchor"
                               href="javascript:void(0);"
-                              class="min-w-fit text-[#8c9097] dark:text-white/50 me-1 dropdown-item-close1"
+                              class="min-w-fit text-[#8c9097] me-1 dropdown-item-close1"
                               ><i class="ti ti-x text-[1rem]"></i
                             ></a>
                           </div>
@@ -293,7 +293,7 @@
                         <div class="grow flex items-center justify-between">
                           <div>
                             <p
-                              class="mb-0 text-defaulttextcolor dark:text-[#8c9097] dark:text-white/50 text-[0.8125rem] font-semibold"
+                              class="mb-0 text-defaulttextcolor text-[0.8125rem] font-semibold"
                             >
                               <a href="notifications.html"
                                 >Order Delayed
@@ -301,7 +301,7 @@
                               >
                             </p>
                             <span
-                              class="text-[#8c9097] dark:text-white/50 font-normal text-[0.75rem] header-notification-text"
+                              class="text-[#8c9097] font-normal text-[0.75rem] header-notification-text"
                               >Order Delayed Unfortunately</span
                             >
                           </div>
@@ -309,7 +309,7 @@
                             <a
                               aria-label="anchor"
                               href="javascript:void(0);"
-                              class="min-w-fit text-[#8c9097] dark:text-white/50 me-1 dropdown-item-close1"
+                              class="min-w-fit text-[#8c9097] me-1 dropdown-item-close1"
                               ><i class="ti ti-x text-[1rem]"></i
                             ></a>
                           </div>
@@ -335,7 +335,7 @@
                         <i class="ri-notification-off-line text-[2rem]"></i>
                       </span>
                       <h6
-                        class="font-semibold mt-3 text-defaulttextcolor dark:text-[#8c9097] dark:text-white/50 text-[1rem]"
+                        class="font-semibold mt-3 text-defaulttextcolor text-[1rem]"
                       >
                         No New Notifications
                       </h6>
@@ -375,7 +375,7 @@
                   <p
                     class="font-semibold mb-0 leading-none text-[#536485] text-[0.813rem]"
                   >
-                    {{-- {{ Auth::user()->name ?? 'None'}} --}}
+                    {{ Auth::user()->name ?? ''}}
                   </p>
                   
                 </div>
@@ -384,46 +384,18 @@
                   aria-labelledby="dropdown-profile"
                 >
                   <ul
-                    class="text-defaulttextcolor font-medium dark:text-[#8c9097] dark:text-white/50"
+                    class="text-defaulttextcolor font-medium"
                   >
                     <li>
-                    {{-- <x-responsive-nav-link :href="route('profile.edit')" class="w-full ti-dropdown-item !text-[0.8125rem] !gap-x-0 !p-[0.65rem] !inline-flex">
+                    <x-responsive-nav-link :href="route('profile.show')" class="w-full ti-dropdown-item !text-[0.8125rem] !gap-x-0 !p-[0.65rem] !inline-flex">
                    <i
                           class="ti ti-user-circle text-[1.125rem] me-2 opacity-[0.7]"
                         ></i
                         >Profile
-                </x-responsive-nav-link> --}}
+                </x-responsive-nav-link>
                     </li>
-                    <li>
-                      <a
-                        class="w-full ti-dropdown-item !text-[0.8125rem] !gap-x-0 !p-[0.65rem] !inline-flex"
-                        href="mail.html"
-                        ><i
-                          class="ti ti-inbox text-[1.125rem] me-2 opacity-[0.7]"
-                        ></i
-                        >Inbox
-                        <span
-                          class="!py-1 !px-[0.45rem] !font-semibold !rounded-sm text-success text-[0.75em] bg-success/10 ms-auto"
-                          >25</span
-                        >
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="w-full ti-dropdown-item !text-[0.8125rem] !gap-x-0 !p-[0.65rem] !inline-flex"
-                        href="todo.html"
-                        ><i
-                          class="ti ti-clipboard-check text-[1.125rem] me-2 opacity-[0.7]"
-                        ></i
-                        >Task Manager</a
-                      >
-                    </li>
-                    
-                    
-                    
-                    
-                    <li>
-                      {{-- <form method="POST" action="{{ route('logout') }}">
+                   <li>
+                      <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
@@ -434,7 +406,7 @@
                         ></i
                         >Log Out
                     </x-responsive-nav-link>
-                </form> --}}
+                </form>
                     </li>
                     
                   </ul>
@@ -447,7 +419,7 @@
                 <button
                   aria-label="button"
                   type="button"
-                  class="hs-dropdown-toggle switcher-icon inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium align-middle transition-all text-xs dark:text-[#8c9097] dark:text-white/50 dark:hover:text-white dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+                  class="hs-dropdown-toggle switcher-icon inline-flex flex-shrink-0 justify-center items-center gap-2 rounded-full font-medium align-middle transition-all text-xs"
                   data-hs-overlay="#hs-overlay-switcher"
                 >
                   <i class="bx bx-cog header-link-icon animate-spin-slow"></i>

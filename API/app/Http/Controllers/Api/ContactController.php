@@ -18,7 +18,11 @@ class ContactController extends Controller
     } 
     public function index()
     {
-        return ContactResource::collection(Contact::with('company')->get());
+         // Fetch contacts with the associated company, ordered by the creation date in descending order
+    $contacts = Contact::with('company')->orderBy('created_at', 'desc')->get();
+
+    // Return the collection as a ContactResource
+    return ContactResource::collection($contacts);
     }
 
     /**

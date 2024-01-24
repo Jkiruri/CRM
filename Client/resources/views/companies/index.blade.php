@@ -56,19 +56,19 @@
                                                                 
                                                                 <div>
                                                                     <a href="#" data-hs-overlay="#"style="text-decoration: none"><span class="block font-semibold"style="text-decoration: none">{{ $company['name'] }}</span></a>
-                                                                    <span class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem]" title="Last Contacted"><i class="ri-account-circle-line me-1 text-[0.8125rem] align-middle"></i>24, Jul 2023 - 4:45PM</span>
+                                                                    <span class="block text-[#8c9097] text-[0.6875rem]" title="Last Contacted"><i class="ri-account-circle-line me-1 text-[0.8125rem] align-middle"></i>24, Jul 2023 - 4:45PM</span>
                                                                 </div>
                                                             </div>
                                                         </td>
                                                         
                                                         <td>
                                                             <div>
-                                                                <span class="block mb-1"><i class="ri-mail-line me-2 align-middle text-[.875rem] text-[#8c9097] dark:text-white/50 inline-flex"></i>{{ $company['email'] }}</span>
+                                                                <span class="block mb-1"><i class="ri-mail-line me-2 align-middle text-[.875rem] text-[#8c9097] inline-flex"></i>{{ $company['email'] }}</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div>
-                                                                <span class="block"><i class="ri-phone-line me-2 align-middle text-[.875rem] text-[#8c9097] dark:text-white/50 inline-flex"></i>{{ $company['phone'] }}</span>
+                                                                <span class="block"><i class="ri-phone-line me-2 align-middle text-[.875rem] text-[#8c9097] inline-flex"></i>{{ $company['phone'] }}</span>
                                                             </div>
                                                         </td>
                                                         
@@ -147,7 +147,7 @@
                         <!-- End:: Contact Details Offcanvas -->
 
                         <!-- Start:: Create Contact -->
-       <div id="createCompanyModal" class="hs-overlay hidden ti-modal">
+<div id="createCompanyModal" class="hs-overlay hidden ti-modal">
     <div class="hs-overlay-open:mt-7 ti-modal-box mt-0 ease-out">
         <div class="ti-modal-content">
             <div class="ti-modal-header">
@@ -191,7 +191,6 @@
 
 </div>
 <script>
-    
     function createCompany() {
         // Get form data
         let formData = {
@@ -202,21 +201,28 @@
             // Add other fields as needed
         };
 
+        // Get the Sanctum token from the environment variable
+        let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
+
         // Make a POST request using Axios
-        axios.post('http://127.0.0.1:8000/api/companies', formData)
-            .then(function (response) {
-                console.log(response.data);
-                showSuccessAlert();
-                clearForm();
-                // Reload the page after a short delay
-                setTimeout(function () {
-                    location.reload();
-                }, 2000);
-            })
-            .catch(function (error) {
-                console.error('Error creating company:', error);
-                alert('Failed to create company. Please check the console for details.');
-            });
+        axios.post('http://127.0.0.1:8000/api/companies', formData, {
+            headers: {
+                'Authorization': `Bearer ${sanctumToken}`,
+            },
+        })
+        .then(function (response) {
+            console.log(response.data);
+            showSuccessAlert();
+            clearForm();
+            // Reload the page after a short delay
+            setTimeout(function () {
+                location.reload();
+            }, 2000);
+        })
+        .catch(function (error) {
+            console.error('Error creating company:', error);
+            alert('Failed to create company. Please check the console for details.');
+        });
     }
 
     function clearForm() {
@@ -249,9 +255,8 @@
             location.reload();
         }, 2000);
     }
-
-
 </script>
+
 
 
 @endsection

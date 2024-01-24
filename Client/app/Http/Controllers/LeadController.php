@@ -18,6 +18,12 @@ class LeadController extends Controller
         ])->get('http://localhost:8000/api/leads/');
         $responseData = $response->json();
 
+        $responseCompany = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+        ])->get('http://localhost:8000/api/companies/');
+        $companies = $responseCompany->json();
+
         // Check if 'data' key exists in the response
         $leads = isset($responseData['data']) ? $responseData['data'] : [];
 
@@ -31,7 +37,7 @@ class LeadController extends Controller
             'path' => LengthAwarePaginator::resolveCurrentPath(),
         ]);
 
-        return view('leads.index', compact('paginator', 'totalItems', 'leads'));
+        return view('leads.index', compact('paginator', 'totalItems', 'leads', 'companies'));
     }
     public function create (){
 

@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <div id="your-alert-container"></div>
     <div class="row justify-content-center">
         <div class="col-md-6">
             <form id="createLeadForm">
@@ -53,16 +54,29 @@
         };
 
         // Make a POST request using Axios
-        axios.post('http://127.0.0.1:8000/api/leads', formData)
+        let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
+        // Make a POST request using Axios
+        axios.post('http://127.0.0.1:8000/api/leads', formData, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${sanctumToken}`,
+            },
+        })
             .then(function (response) {
                 console.log(response.data);
-                showSuccessAlert();
+                
                 clearForm();
+                showSuccessAlert();
+                redirectToLeads();
             })
             .catch(function (error) {
-                console.error('Error creating lead:', error);
-                alert('Failed to create lead. Please check the console for details.');
+                console.error('Error creating leads:', error);
+                alert('Failed to create leads. Please check the console for details.');
             });
+    }
+    function redirectToLeads() {
+        // Redirect to the "/companies" page
+        window.location.href = '/leads';
     }
 
     function clearForm() {
@@ -77,13 +91,14 @@
 
     function showSuccessAlert() {
         // Create an alert element
+            // Display the success alert
         let alertDiv = document.createElement('div');
         alertDiv.className = 'alert alert-primary';
         alertDiv.role = 'alert';
         alertDiv.innerText = 'Lead created successfully!';
 
-        // Append the alert to the body
-        document.body.appendChild(alertDiv);
+        // Append the alert to the document
+    document.getElementById('your-alert-container').appendChild(alertDiv);
     }
 </script>
 

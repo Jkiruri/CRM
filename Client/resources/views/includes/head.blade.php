@@ -48,4 +48,9 @@
     <link href="{{ asset('assets/iconfonts/bootstrap-icons/icons/font/fonts/bootstrap-icons.woff2') }}" rel="stylesheet"  crossorigin="anonymous">
     <script src="{{ asset('assets/jquery-3.6.4.min.js') }}"></script>
     <script src="{{ asset('assets/axios.min.js') }}"></script>
+    <!-- In your Blade template -->
+    <script>
+    var sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
+    </script>
+
   </head>

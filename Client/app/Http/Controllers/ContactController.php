@@ -18,6 +18,14 @@ class ContactController extends Controller
         'Accept' => 'application/json',
     ])->get('http://localhost:8000/api/contacts/');
         $responseData = $response->json();
+        
+    $responseCompany = Http::withHeaders([
+        'Authorization' => 'Bearer ' . $sanctumToken,
+        'Accept' => 'application/json',
+    ])->get('http://localhost:8000/api/companies/');
+    $companies = $responseCompany->json();
+
+
 
         // Check if 'data' key exists in the response
         $contacts = isset($responseData['data']) ? $responseData['data'] : [];
@@ -32,7 +40,7 @@ class ContactController extends Controller
             'path' => LengthAwarePaginator::resolveCurrentPath(),
         ]);
 
-        return view('contacts.index', compact('paginator', 'totalItems', 'contacts'));
+        return view('contacts.index', compact('paginator', 'totalItems', 'contacts', 'companies'));
     }
     
 

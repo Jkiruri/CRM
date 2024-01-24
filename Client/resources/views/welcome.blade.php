@@ -8,12 +8,12 @@
           >
             <div>
               <p
-                class="font-semibold text-[1.125rem] text-defaulttextcolor dark:text-defaulttextcolor/70 !mb-0"
+                class="font-semibold text-[1.125rem] text-defaulttextcolor !mb-0"
               >
-                Welcome back, Brian Mwangi !
+                Welcome back, {{ Auth::user()->name ?? ''}}
               </p>
               <p
-                class="font-normal text-[#8c9097] dark:text-white/50 text-[0.813rem]"
+                class="font-normal text-[#8c9097] text-[0.813rem]"
               >
                 Track your sales activity, leads and deals here.
               </p>
@@ -136,7 +136,7 @@
                                   Elizabeth Muita
                                 </p>
                                 <p
-                                  class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
+                                  class="text-[#8c9097] text-[0.75rem]"
                                 ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
@@ -160,7 +160,7 @@
                                   John Kuria
                                 </p>
                                 <p
-                                  class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
+                                  class="text-[#8c9097] text-[0.75rem]"
                                 ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
@@ -188,7 +188,7 @@
                                   Randy Maina
                                 </p>
                                 <p
-                                  class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
+                                  class="text-[#8c9097] text-[0.75rem]"
                                 ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
@@ -212,7 +212,7 @@
                                   David Mukera
                                 </p>
                                 <p
-                                  class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
+                                  class="text-[#8c9097] text-[0.75rem]"
                                 ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
@@ -236,7 +236,7 @@
                                   Kennedy Mundia
                                 </p>
                                 <p
-                                  class="text-[#8c9097] dark:text-white/50 text-[0.75rem]"
+                                  class="text-[#8c9097] text-[0.75rem]"
                                 ></p>
                               </div>
                               <div class="font-semibold text-[0.9375rem]">
@@ -255,7 +255,7 @@
                         <div class="hs-dropdown ti-dropdown">
                           <a
                             href="javascript:void(0);"
-                            class="px-2 font-normal text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                            class="px-2 font-normal text-[0.75rem] text-[#8c9097]"
                             aria-expanded="false"
                           >
                             View All<i
@@ -317,7 +317,7 @@
                               >
                                 <div>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 text-[0.813rem] mb-0"
+                                    class="text-[#8c9097] text-[0.813rem] mb-0"
                                   >
                                     Total Customers
                                   </p>
@@ -346,7 +346,7 @@
                                     +40%
                                   </p>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 opacity-[0.7] text-[0.6875rem]"
+                                    class="text-[#8c9097] opacity-[0.7] text-[0.6875rem]"
                                   >
                                     this month
                                   </p>
@@ -376,7 +376,7 @@
                               >
                                 <div>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 text-[0.813rem] mb-0"
+                                    class="text-[#8c9097] text-[0.813rem] mb-0"
                                   >
                                     Total Revenue
                                   </p>
@@ -405,7 +405,7 @@
                                     +25%
                                   </p>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 opacity-[0.7] text-[0.6875rem]"
+                                    class="text-[#8c9097] opacity-[0.7] text-[0.6875rem]"
                                   >
                                     this month
                                   </p>
@@ -435,7 +435,7 @@
                               >
                                 <div>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 text-[0.813rem] mb-0"
+                                    class="text-[#8c9097] text-[0.813rem] mb-0"
                                   >
                                     Conversion Ratio
                                   </p>
@@ -464,7 +464,7 @@
                                     -12%
                                   </p>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 opacity-[0.7] text-[0.6875rem]"
+                                    class="text-[#8c9097] opacity-[0.7] text-[0.6875rem]"
                                   >
                                     this month
                                   </p>
@@ -494,7 +494,7 @@
                               >
                                 <div>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 text-[0.813rem] mb-0"
+                                    class="text-[#8c9097] text-[0.813rem] mb-0"
                                   >
                                     Total Deals
                                   </p>
@@ -523,7 +523,7 @@
                                     +19%
                                   </p>
                                   <p
-                                    class="text-[#8c9097] dark:text-white/50 opacity-[0.7] text-[0.6875rem]"
+                                    class="text-[#8c9097] opacity-[0.7] text-[0.6875rem]"
                                   >
                                     this month
                                   </p>
@@ -541,7 +541,7 @@
                           <div class="hs-dropdown ti-dropdown">
                             <a
                               href="javascript:void(0);"
-                              class="text-[0.75rem] px-2 font-normal text-[#8c9097] dark:text-white/50"
+                              class="text-[0.75rem] px-2 font-normal text-[#8c9097]"
                               aria-expanded="false"
                             >
                               View All<i
@@ -642,7 +642,7 @@
                         >
                           <thead>
                             <tr
-                              class="border border-inherit border-solid dark:border-defaultborder/10"
+                              class="border border-inherit border-solid"
                             >
                               <th scope="row" class="!ps-4 !pe-5">
                                 <input
@@ -693,7 +693,7 @@
                           </thead>
                           <tbody>
                             <tr
-                              class="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                              class="border border-inherit border-solid hover:bg-gray-100"
                             >
                               <th scope="row" class="!ps-4 !pe-5">
                                 <input
@@ -746,7 +746,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                              class="border border-inherit border-solid hover:bg-gray-100"
                             >
                               <th scope="row" class="!ps-4 !pe-5">
                                 <input
@@ -800,7 +800,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                              class="border border-inherit border-solid hover:bg-gray-100"
                             >
                               <th scope="row" class="!ps-4 !pe-5">
                                 <input
@@ -853,7 +853,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                              class="border border-inherit border-solid hover:bg-gray-100"
                             >
                               <th scope="row" class="!ps-4 !pe-5">
                                 <input
@@ -907,7 +907,7 @@
                               </td>
                             </tr>
                             <tr
-                              class="border border-inherit border-solid hover:bg-gray-100 dark:border-defaultborder/10 dark:hover:bg-light"
+                              class="border border-inherit border-solid hover:bg-gray-100"
                             >
                               <th scope="row" class="!ps-4 !pe-5">
                                 <input
@@ -967,7 +967,7 @@
                     <div class="box-footer">
                       <div class="sm:flex items-center">
                         <div
-                          class="text-defaulttextcolor dark:text-defaulttextcolor/70"
+                          class="text-defaulttextcolor"
                         >
                           Showing 5 Entries
                           <i class="bi bi-arrow-right ms-2 font-semibold"></i>
@@ -1069,14 +1069,14 @@
                       </div>
                     </div>
                     <div
-                      class="grid grid-cols-4 border-t border-dashed dark:border-defaultborder/10"
+                      class="grid grid-cols-4 border-t border-dashed"
                     >
                       <div class="col !p-0">
                         <div
-                          class="!ps-4 p-[0.95rem] text-center border-e border-dashed dark:border-defaultborder/10"
+                          class="!ps-4 p-[0.95rem] text-center border-e border-dashed"
                         >
                           <span
-                            class="text-[#8c9097] dark:text-white/50 text-[0.75rem] mb-1 crm-lead-legend mobile inline-block"
+                            class="text-[#8c9097] text-[0.75rem] mb-1 crm-lead-legend mobile inline-block"
                             >Mobile
                           </span>
                           <div>
@@ -1086,10 +1086,10 @@
                       </div>
                       <div class="col !p-0">
                         <div
-                          class="p-[0.95rem] text-center border-e border-dashed dark:border-defaultborder/10"
+                          class="p-[0.95rem] text-center border-e border-dashed"
                         >
                           <span
-                            class="text-[#8c9097] dark:text-white/50 text-[0.75rem] mb-1 crm-lead-legend desktop inline-block"
+                            class="text-[#8c9097] text-[0.75rem] mb-1 crm-lead-legend desktop inline-block"
                             >Desktop
                           </span>
                           <div>
@@ -1099,10 +1099,10 @@
                       </div>
                       <div class="col !p-0">
                         <div
-                          class="p-[0.95rem] text-center border-e border-dashed dark:border-defaultborder/10"
+                          class="p-[0.95rem] text-center border-e border-dashed"
                         >
                           <span
-                            class="text-[#8c9097] dark:text-white/50 text-[0.75rem] mb-1 crm-lead-legend laptop inline-block"
+                            class="text-[#8c9097] text-[0.75rem] mb-1 crm-lead-legend laptop inline-block"
                             >Laptop
                           </span>
                           <div>
@@ -1113,7 +1113,7 @@
                       <div class="col !p-0">
                         <div class="!pe-4 p-[0.95rem] text-center">
                           <span
-                            class="text-[#8c9097] dark:text-white/50 text-[0.75rem] mb-1 crm-lead-legend tablet inline-block"
+                            class="text-[#8c9097] text-[0.75rem] mb-1 crm-lead-legend tablet inline-block"
                             >Tablet
                           </span>
                           <div>
@@ -1131,7 +1131,7 @@
                       <div class="hs-dropdown ti-dropdown">
                         <a
                           href="javascript:void(0);"
-                          class="text-[0.75rem] px-2 font-normal text-[#8c9097] dark:text-white/50"
+                          class="text-[0.75rem] px-2 font-normal text-[#8c9097]"
                           aria-expanded="false"
                         >
                           View All<i
@@ -1177,7 +1177,7 @@
                             ></i
                           ></span>
                           <span
-                            class="text-[#8c9097] dark:text-white/50 text-[0.813rem] ms-1"
+                            class="text-[#8c9097] text-[0.813rem] ms-1"
                             >compared to last week</span
                           >
                         </div>
@@ -1206,7 +1206,7 @@
                           >
                             <div>Successful Deals</div>
                             <div
-                              class="text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                              class="text-[0.75rem] text-[#8c9097]"
                             >
                               987 deals
                             </div>
@@ -1218,7 +1218,7 @@
                           >
                             <div>Pending Deals</div>
                             <div
-                              class="text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                              class="text-[0.75rem] text-[#8c9097]"
                             >
                               1,073 deals
                             </div>
@@ -1230,7 +1230,7 @@
                           >
                             <div>Rejected Deals</div>
                             <div
-                              class="text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                              class="text-[0.75rem] text-[#8c9097]"
                             >
                               1,674 deals
                             </div>
@@ -1242,7 +1242,7 @@
                           >
                             <div>Upcoming Deals</div>
                             <div
-                              class="text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                              class="text-[0.75rem] text-[#8c9097]"
                             >
                               921 deals
                             </div>
@@ -1259,7 +1259,7 @@
                       <div class="hs-dropdown ti-dropdown">
                         <a
                           href="javascript:void(0);"
-                          class="text-[0.75rem] px-2 font-normal text-[#8c9097] dark:text-white/50"
+                          class="text-[0.75rem] px-2 font-normal text-[#8c9097]"
                           aria-expanded="false"
                         >
                           View All<i
@@ -1324,7 +1324,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >4:45PM</span
                                 >
                               </div>
@@ -1350,13 +1350,13 @@
                                   completed</span
                                 >
                                 <span
-                                  class="block text-[0.75rem] text-[#8c9097] dark:text-white/50"
+                                  class="block text-[0.75rem] text-[#8c9097]"
                                   >Lorem ipsum, dolor sit amet.</span
                                 >
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >3 hrs</span
                                 >
                               </div>
@@ -1391,7 +1391,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >22 hrs</span
                                 >
                               </div>
@@ -1422,7 +1422,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >Today</span
                                 >
                               </div>
@@ -1446,7 +1446,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >22 hrs</span
                                 >
                               </div>
@@ -1476,7 +1476,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >12 hrs</span
                                 >
                               </div>
@@ -1488,7 +1488,7 @@
                             <div class="flex items-start">
                               <div class="me-4">
                                 <span
-                                  class="w-[1.25rem] h-[1.25rem] leading-[1.25rem] inline-flex items-center justify-center font-medium text-[0.65rem] text-[#232323] dark:text-white bg-[#232323]/10 dark:bg-white/20 rounded-full"
+                                  class="w-[1.25rem] h-[1.25rem] leading-[1.25rem] inline-flex items-center justify-center font-medium text-[0.65rem] text-[#232323] bg-[#232323]/10 rounded-full"
                                 >
                                   <i
                                     class="bi bi-circle-fill text-[0.5rem]"
@@ -1505,7 +1505,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >4 hrs</span
                                 >
                               </div>
@@ -1536,7 +1536,7 @@
                               </div>
                               <div class="flex-grow text-end">
                                 <span
-                                  class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem] opacity-[0.7]"
+                                  class="block text-[#8c9097] text-[0.6875rem] opacity-[0.7]"
                                   >4 hrs</span
                                 >
                               </div>

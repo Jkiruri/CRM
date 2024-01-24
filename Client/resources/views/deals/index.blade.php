@@ -52,7 +52,7 @@
                                                                 
                                                                 <div>
                                                                     <a href="#" data-hs-overlay="#"style="text-decoration: none"><span class="block font-semibold"style="text-decoration: none">{{ $deal['name'] }}</span></a>
-                                                                    <span class="block text-[#8c9097] dark:text-white/50 text-[0.6875rem]" title="Last Contacted"><i class="ri-account-circle-line me-1 text-[0.8125rem] align-middle"></i>24, Jul 2023 - 4:45PM</span>
+                                                                    <span class="block text-[#8c9097] text-[0.6875rem]" title="Last Contacted"><i class="ri-account-circle-line me-1 text-[0.8125rem] align-middle"></i>24, Jul 2023 - 4:45PM</span>
                                                                 </div>
                                                             </div>
                                                         </td>
@@ -63,12 +63,12 @@
                                                         </td>
                                                         <td>
                                                             <div>
-                                                                <span class="block mb-1"><i class="ri-mail-line me-2 align-middle text-[.875rem] text-[#8c9097] dark:text-white/50 inline-flex"></i>{{ $deal['amount'] }}</span>
+                                                                <span class="block mb-1"><i class="ri-mail-line me-2 align-middle text-[.875rem] text-[#8c9097] inline-flex"></i>{{ $deal['amount'] }}</span>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <div>
-                                                                <span class="block"><i class="ri-phone-line me-2 align-middle text-[.875rem] text-[#8c9097] dark:text-white/50 inline-flex"></i>{{ $deal['company']['name'] }}</span>
+                                                                <span class="block"><i class="ri-phone-line me-2 align-middle text-[.875rem] text-[#8c9097] inline-flex"></i>{{ $deal['company']['name'] }}</span>
                                                             </div>
                                                         </td>
                                                     

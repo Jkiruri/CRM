@@ -21,7 +21,7 @@
         <h5 class="ti-offcanvas-title">Switcher</h5>
         <button
           type="button"
-          class="ti-btn flex-shrink-0 p-0 transition-none text-defaulttextcolor dark:text-defaulttextcolor/70 hover:text-gray-700 focus:ring-gray-400 focus:ring-offset-white dark:hover:text-white/80 dark:focus:ring-white/10 dark:focus:ring-offset-white/10"
+          class="ti-btn flex-shrink-0 p-0 transition-none text-defaulttextcolor hover:text-gray-700 focus:ring-gray-400 focus:ring-offset-white"
           data-hs-overlay="#hs-overlay-switcher"
         >
           <span class="sr-only">Close modal</span>
@@ -29,12 +29,12 @@
         </button>
       </div>
       <div
-        class="ti-offcanvas-body !p-0 !border-b dark:border-white/10 z-10 relative !h-auto"
+        class="ti-offcanvas-body !p-0 !border-b z-10 relative !h-auto"
       >
         <div class="flex rtl:space-x-reverse" aria-label="Tabs" role="tablist">
           <button
             type="button"
-            class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success dark:hs-tab-active:bg-success/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-success -mb-px bg-white font-semibold text-center text-defaulttextcolor dark:text-defaulttextcolor/70 rounded-none hover:text-gray-700 dark:bg-bodybg dark:border-white/10 active"
+            class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success -mb-px bg-white font-semibold text-center text-defaulttextcolor rounded-none hover:text-gray-700 active"
             id="switcher-item-1"
             data-hs-tab="#switcher-1"
             aria-controls="switcher-1"
@@ -44,7 +44,7 @@
           </button>
           <button
             type="button"
-            class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success dark:hs-tab-active:bg-success/20 dark:hs-tab-active:border-b-white/10 dark:hs-tab-active:text-success -mb-px bg-white font-semibold text-center text-defaulttextcolor dark:text-defaulttextcolor/70 rounded-none hover:text-gray-700 dark:bg-bodybg dark:border-white/10 dark:hover:text-gray-300"
+            class="hs-tab-active:bg-success/20 w-full !py-2 !px-4 hs-tab-active:border-b-transparent text-defaultsize border-0 hs-tab-active:text-success -mb-px bg-white font-semibold text-center text-defaulttextcolor rounded-none hover:text-gray-700"
             id="switcher-item-2"
             data-hs-tab="#switcher-2"
             aria-controls="switcher-2"
@@ -74,7 +74,7 @@
                 />
                 <label
                   for="switcher-light-theme"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Light</label
                 >
               </div>
@@ -87,7 +87,7 @@
                 />
                 <label
                   for="switcher-dark-theme"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Dark</label
                 >
               </div>
@@ -106,7 +106,7 @@
                 />
                 <label
                   for="switcher-ltr"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >LTR</label
                 >
               </div>
@@ -119,7 +119,7 @@
                 />
                 <label
                   for="switcher-rtl"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >RTL</label
                 >
               </div>
@@ -138,7 +138,7 @@
                 />
                 <label
                   for="switcher-vertical"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Vertical</label
                 >
               </div>
@@ -151,7 +151,7 @@
                 />
                 <label
                   for="switcher-horizontal"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Horizontal</label
                 >
               </div>
@@ -170,7 +170,7 @@
                 />
                 <label
                   for="switcher-menu-click"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Menu Click</label
                 >
               </div>
@@ -183,7 +183,7 @@
                 />
                 <label
                   for="switcher-menu-hover"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Menu Hover</label
                 >
               </div>
@@ -196,7 +196,7 @@
                 />
                 <label
                   for="switcher-icon-click"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Icon Click</label
                 >
               </div>
@@ -209,7 +209,7 @@
                 />
                 <label
                   for="switcher-icon-hover"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Icon Hover</label
                 >
               </div>
@@ -232,7 +232,7 @@
                 />
                 <label
                   for="switcher-default-menu"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Default Menu</label
                 >
               </div>
@@ -245,7 +245,7 @@
                 />
                 <label
                   for="switcher-closed-menu"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                 >
                   Closed Menu</label
                 >
@@ -259,7 +259,7 @@
                 />
                 <label
                   for="switcher-icontext-menu"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Icon Text</label
                 >
               </div>
@@ -272,7 +272,7 @@
                 />
                 <label
                   for="switcher-icon-overlay"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Icon Overlay</label
                 >
               </div>
@@ -285,7 +285,7 @@
                 />
                 <label
                   for="switcher-detached"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Detached</label
                 >
               </div>
@@ -298,7 +298,7 @@
                 />
                 <label
                   for="switcher-double-menu"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Double Menu</label
                 >
               </div>
@@ -320,7 +320,7 @@
                 />
                 <label
                   for="switcher-regular"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Regular</label
                 >
               </div>
@@ -333,7 +333,7 @@
                 />
                 <label
                   for="switcher-classic"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Classic</label
                 >
               </div>
@@ -346,7 +346,7 @@
                 />
                 <label
                   for="switcher-modern"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                 >
                   Modern</label
                 >
@@ -366,7 +366,7 @@
                 />
                 <label
                   for="switcher-full-width"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >FullWidth</label
                 >
               </div>
@@ -379,7 +379,7 @@
                 />
                 <label
                   for="switcher-boxed"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Boxed</label
                 >
               </div>
@@ -398,7 +398,7 @@
                 />
                 <label
                   for="switcher-menu-fixed"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Fixed</label
                 >
               </div>
@@ -411,7 +411,7 @@
                 />
                 <label
                   for="switcher-menu-scroll"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Scrollable
                 </label>
               </div>
@@ -430,7 +430,7 @@
                 />
                 <label
                   for="switcher-header-fixed"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                 >
                   Fixed</label
                 >
@@ -444,7 +444,7 @@
                 />
                 <label
                   for="switcher-header-scroll"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Scrollable
                 </label>
               </div>
@@ -463,7 +463,7 @@
                 />
                 <label
                   for="switcher-loader-enable"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                 >
                   Enable</label
                 >
@@ -477,7 +477,7 @@
                 />
                 <label
                   for="switcher-loader-disable"
-                  class="text-defaultsize text-defaulttextcolor dark:text-defaulttextcolor/70 ms-2 font-semibold"
+                  class="text-defaultsize text-defaulttextcolor ms-2 font-semibold"
                   >Disable
                 </label>
               </div>
@@ -504,7 +504,7 @@
                   checked
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Light Menu
@@ -521,7 +521,7 @@
                   checked
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Dark Menu
@@ -537,7 +537,7 @@
                   id="switcher-menu-primary"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Color Menu
@@ -553,7 +553,7 @@
                   id="switcher-menu-gradient"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Gradient Menu
@@ -569,14 +569,14 @@
                   id="switcher-menu-transparent"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Transparent Menu
                 </span>
               </div>
             </div>
-            <div class="px-4 text-[#8c9097] dark:text-white/50 text-[.6875rem]">
+            <div class="px-4 text-[#8c9097] text-[.6875rem]">
               <b class="me-2">Note:</b>If you want to change color Menu
               dynamically change from below Theme Primary color picker.
             </div>
@@ -595,7 +595,7 @@
                   checked
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Light Header
@@ -611,7 +611,7 @@
                   id="switcher-header-dark"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Dark Header
@@ -627,7 +627,7 @@
                   id="switcher-header-primary"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Color Header
@@ -643,7 +643,7 @@
                   id="switcher-header-gradient"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Gradient Header
@@ -659,14 +659,14 @@
                   id="switcher-header-transparent"
                 />
                 <span
-                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm dark:!bg-black"
+                  class="hs-tooltip-content ti-main-tooltip-content !py-1 !px-2 !bg-black text-xs font-medium !text-white shadow-sm"
                   role="tooltip"
                 >
                   Transparent Header
                 </span>
               </div>
             </div>
-            <div class="px-4 text-[#8c9097] dark:text-white/50 text-[.6875rem]">
+            <div class="px-4 text-[#8c9097] text-[.6875rem]">
               <b class="me-2">Note:</b>If you want to change color Header
               dynamically change from below Theme Primary color picker.
             </div>
@@ -876,7 +876,7 @@
       <div id="search-modal" class="hs-overlay ti-modal hidden mt-[1.75rem]">
         <div class="ti-modal-box">
           <div
-            class="ti-modal-content !border !border-defaultborder dark:!border-defaultborder/10 !rounded-[0.5rem]"
+            class="ti-modal-content !border !border-defaultborder !rounded-[0.5rem]"
           >
             <div class="ti-modal-body">
               <div
@@ -918,21 +918,21 @@
                   >
                     <li>
                       <a
-                        class="ti-dropdown-item flex text-defaulttextcolor dark:text-defaulttextcolor/70 !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
+                        class="ti-dropdown-item flex text-defaulttextcolor !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
                         href="javascript:void(0);"
                         >Action</a
                       >
                     </li>
                     <li>
                       <a
-                        class="ti-dropdown-item flex text-defaulttextcolor dark:text-defaulttextcolor/70 !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
+                        class="ti-dropdown-item flex text-defaulttextcolor !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
                         href="javascript:void(0);"
                         >Another action</a
                       >
                     </li>
                     <li>
                       <a
-                        class="ti-dropdown-item flex text-defaulttextcolor dark:text-defaulttextcolor/70 !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
+                        class="ti-dropdown-item flex text-defaulttextcolor !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
                         href="javascript:void(0);"
                         >Something else here</a
                       >
@@ -942,7 +942,7 @@
                     </li>
                     <li>
                       <a
-                        class="ti-dropdown-item flex text-defaulttextcolor dark:text-defaulttextcolor/70 !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
+                        class="ti-dropdown-item flex text-defaulttextcolor !py-[0.5rem] !px-[0.9375rem] !text-[0.8125rem] font-medium"
                         href="javascript:void(0);"
                         >Separated link</a
                       >
@@ -952,13 +952,13 @@
               </div>
               <div class="mt-5">
                 <p
-                  class="font-normal text-[#8c9097] dark:text-white/50 text-[0.813rem] dark:text-gray-200 mb-2"
+                  class="font-normal text-[#8c9097] text-[0.813rem] mb-2"
                 >
                   Are You Looking For...
                 </p>
 
                 <span
-                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem] dark:border-defaultborder/10"
+                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem]"
                   ><i class="fe fe-user me-2"></i>People<a
                     href="javascript:void(0)"
                     class="tag-addon header-remove-btn"
@@ -966,7 +966,7 @@
                     ><i class="fe fe-x"></i></a
                 ></span>
                 <span
-                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem] dark:border-defaultborder/10"
+                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem]"
                   ><i class="fe fe-file-text me-2"></i>Pages<a
                     href="javascript:void(0)"
                     class="tag-addon header-remove-btn"
@@ -974,7 +974,7 @@
                     ><i class="fe fe-x"></i></a
                 ></span>
                 <span
-                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem] dark:border-defaultborder/10"
+                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem]"
                   ><i class="fe fe-align-left me-2"></i>Articles<a
                     href="javascript:void(0)"
                     class="tag-addon header-remove-btn"
@@ -982,7 +982,7 @@
                     ><i class="fe fe-x"></i></a
                 ></span>
                 <span
-                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem] dark:border-defaultborder/10"
+                  class="search-tags text-[0.75rem] !py-[0rem] !px-[0.55rem]"
                   ><i class="fe fe-server me-2"></i>Tags<a
                     href="javascript:void(0)"
                     class="tag-addon header-remove-btn"
@@ -993,7 +993,7 @@
 
               <div class="my-[1.5rem]">
                 <p
-                  class="font-normal text-[#8c9097] dark:text-white/50 text-[0.813rem] mb-2"
+                  class="font-normal text-[#8c9097] text-[0.813rem] mb-2"
                 >
                   Recent Search :
                 </p>
@@ -1001,7 +1001,7 @@
                 <div
                   id="dismiss-notifications-alert"
                   role="alert"
-                  class="!p-2 border dark:border-defaultborder/10 rounded-[0.3125rem] flex items-center text-defaulttextcolor dark:text-defaulttextcolor/70 !mb-2 !text-[0.8125rem] alert"
+                  class="!p-2 border rounded-[0.3125rem] flex items-center text-defaulttextcolor !mb-2 !text-[0.8125rem] alert"
                 >
                   <a href="notifications.html"><span>Notifications</span></a>
                   <a
@@ -1010,7 +1010,7 @@
                     href="javascript:void(0);"
                     data-hs-remove-element="#dismiss-notifications-alert"
                     ><i
-                      class="fe fe-x !text-[0.8125rem] text-[#8c9097] dark:text-white/50"
+                      class="fe fe-x !text-[0.8125rem] text-[#8c9097]"
                     ></i
                   ></a>
                 </div>
@@ -1018,7 +1018,7 @@
                 <div
                   id="dismiss-alerts-alert"
                   role="alert"
-                  class="!p-2 border dark:border-defaultborder/10 rounded-[0.3125rem] flex items-center text-defaulttextcolor dark:text-defaulttextcolor/70 !mb-2 !text-[0.8125rem] alert"
+                  class="!p-2 border rounded-[0.3125rem] flex items-center text-defaulttextcolor !mb-2 !text-[0.8125rem] alert"
                 >
                   <a href="alerts.html"><span>Alerts</span></a>
                   <a
@@ -1027,7 +1027,7 @@
                     href="javascript:void(0);"
                     data-hs-remove-element="#dismiss-alerts-alert"
                     ><i
-                      class="fe fe-x !text-[0.8125rem] text-[#8c9097] dark:text-white/50"
+                      class="fe fe-x !text-[0.8125rem] text-[#8c9097]"
                     ></i
                   ></a>
                 </div>
@@ -1035,7 +1035,7 @@
                 <div
                   id="dismiss-mail-alert"
                   role="alert"
-                  class="!p-2 border dark:border-defaultborder/10 rounded-[0.3125rem] flex items-center text-defaulttextcolor dark:text-defaulttextcolor/70 !mb-0 !text-[0.8125rem] alert"
+                  class="!p-2 border rounded-[0.3125rem] flex items-center text-defaulttextcolor !mb-0 !text-[0.8125rem] alert"
                 >
                   <a href="mail.html"><span>Mail</span></a>
                   <a
@@ -1044,7 +1044,7 @@
                     href="javascript:void(0);"
                     data-hs-remove-element="#dismiss-mail-alert"
                     ><i
-                      class="fe fe-x !text-[0.8125rem] text-[#8c9097] dark:text-white/50"
+                      class="fe fe-x !text-[0.8125rem] text-[#8c9097]"
                     ></i
                   ></a>
                 </div>
@@ -1055,13 +1055,13 @@
               <div class="inline-flex rounded-md shadow-sm">
                 <button
                   type="button"
-                  class="ti-btn-group !px-[0.75rem] !py-[0.45rem] rounded-s-[0.25rem] !rounded-e-none ti-btn-primary !text-[0.75rem] dark:border-white/10"
+                  class="ti-btn-group !px-[0.75rem] !py-[0.45rem] rounded-s-[0.25rem] !rounded-e-none ti-btn-primary !text-[0.75rem]"
                 >
                   Search
                 </button>
                 <button
                   type="button"
-                  class="ti-btn-group ti-btn-primary-full rounded-e-[0.25rem] dark:border-white/10 !text-[0.75rem] !rounded-s-none !px-[0.75rem] !py-[0.45rem]"
+                  class="ti-btn-group ti-btn-primary-full rounded-e-[0.25rem] !text-[0.75rem] !rounded-s-none !px-[0.75rem] !py-[0.45rem]"
                 >
                   Clear Recents
                 </button>

@@ -3,6 +3,7 @@
 
 @section('content')
 <div class="container">
+    <div id="your-alert-container"></div>
     <div class="row justify-content-center">
         <div class="col-md-6">
     <form id="createCompanyForm">
@@ -45,7 +46,7 @@
         })
         .then(function (response) {
             console.log(response.data);
-            alert('Company created successfully!');
+            
             clearForm(); // Clear the form
             showSuccessAlert(); // Show the success alert
             redirectToCompanies();
@@ -66,12 +67,13 @@
 
     function showSuccessAlert() {
         // Display the success alert
-        let successAlert = document.createElement('div');
-        successAlert.className = 'alert alert-primary shadow-sm';
-        successAlert.textContent = 'A company has been created successfully!';
+        let alertDiv = document.createElement('div');
+        alertDiv.className = 'alert alert-primary';
+        alertDiv.role = 'alert';
+        alertDiv.innerText = 'Company created successfully!';
 
         // Append the alert to the document
-        document.body.appendChild(successAlert);
+    document.getElementById('your-alert-container').appendChild(alertDiv);
 
         // Remove the alert after a certain duration (e.g., 5 seconds)
         setTimeout(function () {
