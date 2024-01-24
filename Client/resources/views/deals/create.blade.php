@@ -1,6 +1,7 @@
 @extends('app')
 
 @section('content')
+<div id="your-alert-container"></div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -45,50 +46,81 @@
     </div>
 </div>
 <script>
-    function submitForm() {
-        // Get form data
-        let formData = {
-            name: document.getElementById('dealName').value,
-            description: document.getElementById('dealDescription').value,
-            amount: document.getElementById('dealAmount').value,
-            company_id: document.getElementById('dealCompany').value,
-            contact_id: document.getElementById('dealContact').value,
-            closed_date: document.getElementById('dealClosedDate').value,
-        };
+   function submitForm() {
+    // Get form data
+    let formData = {
+        name: document.getElementById('dealName').value,
+        description: document.getElementById('dealDescription').value,
+        amount: document.getElementById('dealAmount').value,
+        company_id: document.getElementById('dealCompany').value,
+        contact_id: document.getElementById('dealContact').value,
+        closed_date: document.getElementById('dealClosedDate').value,
+    };
+    let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
 
-        // Make a POST request using Axios
-        axios.post('http://127.0.0.1:8000/api/deals', formData)
-            .then(function (response) {
-                console.log(response.data);
-                showSuccessAlert();
-                clearForm();
-            })
-            .catch(function (error) {
-                console.error('Error creating deal:', error);
-                alert('Failed to create deal. Please check the console for details.');
-            });
+    // Make a POST request using Axios
+    axios.post('http://127.0.0.1:8000/api/deals', formData, {
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${sanctumToken}`,
+        },
+    })
+    .then(function (response) {
+        console.log(response.data);
+        clearForm();
+        showSuccessAlert();
+        redirectToDeals();
+    })
+    .catch(function (error) {
+        console.error('Error creating deal:', error);
+        
+        if (error.response) {
+            // The request was made and the server responded with a status code
+            console.error('Response data:', error.response.data);
+            console.error('Response status:', error.response.status);
+        } else if (error.request) {
+            // The request was made but no response was received
+            console.error('No response received:', error.request);
+        } else {
+            // Something happened in setting up the request that triggered an Error
+            console.error('Error in request setup:', error.message);
+        }
+
+        alert('Failed to create deal. Please check the console for details.');
+    });
+}
+
+
+
+    function redirectToDeals() {
+        // Redirect to the "/companies" page
+        window.location.href = '/deals';
     }
 
     function clearForm() {
-        // Clear the form fields
-        document.getElementById('dealName').value = '';
-        document.getElementById('dealDescription').value = '';
-        document.getElementById('dealAmount').value = '';
-        document.getElementById('dealCompany').value = '';
-        document.getElementById('dealContact').value = '';
-        document.getElementById('dealClosedDate').value = '';
-        // Clear other fields as needed
-    }
+    // Clear the form fields
+    document.getElementById('dealName').value = '';
+    document.getElementById('dealDescription').value = '';
+    document.getElementById('dealAmount').value = '';
+    
+    // Clear the selected values for dropdowns
+    document.getElementById('dealCompany').selectedIndex = -1;
+    document.getElementById('dealContact').selectedIndex = -1;
+    
+    document.getElementById('dealClosedDate').value = '';
+    // Clear other fields as needed
+}
+
 
     function showSuccessAlert() {
-        // Create an alert element
+        // Display the success alert
         let alertDiv = document.createElement('div');
         alertDiv.className = 'alert alert-primary';
         alertDiv.role = 'alert';
         alertDiv.innerText = 'Deal created successfully!';
 
-        // Append the alert to the body
-        document.body.appendChild(alertDiv);
+        // Append the alert to the document
+    document.getElementById('your-alert-container').appendChild(alertDiv);
     }
 </script>
 @endsection

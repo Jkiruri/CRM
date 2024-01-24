@@ -17,9 +17,10 @@ class DealController extends Controller
         $this->middleware('auth:sanctum');
     } 
     public function index()
-    {
-        return DealResource::collection(Deal::with('company','contact')->get());
-    }
+{
+    return DealResource::collection(Deal::with('company', 'contact')->orderBy('created_at', 'desc')->get());
+}
+
 
     /**
      * Store a newly created resource in storage.
@@ -32,7 +33,7 @@ class DealController extends Controller
             'description' => 'required|string|max:255',
             'amount' => 'required|numeric',
             'company_id' => 'required|exists:companies,id',
-            'contact_id' => 'required|exists:deals,id'
+            'contact_id' => 'required|exists:contacts,id'
 
             ]),
             
