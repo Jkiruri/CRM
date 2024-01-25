@@ -117,14 +117,17 @@
                         <!-- Start:: Contact Details Offcanvas -->
                         
                         
-    <script type="text/javascript">
+<script type="text/javascript">
     function deleteCompany(id) {
         if (confirm("Are you sure you want to delete this company?")) {
+            let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
+
             $.ajax({
                 url: 'http://127.0.0.1:8000/api/companies/' + id,
                 type: 'DELETE',
                 headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Authorization': 'Bearer ' + sanctumToken
                 },
                 success: function (result) {
                     // Handle success, e.g., show a message, reload the page
@@ -141,6 +144,7 @@
         }
     }
 </script>
+
 
 
 
