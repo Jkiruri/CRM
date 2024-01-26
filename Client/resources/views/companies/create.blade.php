@@ -36,7 +36,7 @@
     function submitForm() {
         // Get form data
         let formData = new FormData(document.getElementById('createCompanyForm'));
-        let sanctumToken = '3|EFL6xpzCsZ6clMB4MJZSojjgrihvXw0pfTcUUbqKfbe9486c';
+        let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
         // Make a POST request using Axios
         axios.post('http://127.0.0.1:8000/api/companies', formData, {
         headers: {

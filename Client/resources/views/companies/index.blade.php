@@ -77,15 +77,41 @@
                                                         </td>
                                             
                                                         <td>
+                                                         
                                                             <div class="btn-list">
                                                                 
-                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-info ti-btn-icon"><i class="ri-pencil-line"></i></button>
-                                                                
-                                                                <a href="{{ url('/companies') }}">
-                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-danger ti-btn-icon contact-delete" onclick="deleteCompany({{ $company['id'] }})">
+                                                               @include('companies.edit')
+                                                               
+                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-danger ti-btn-icon contact-delete" data-hs-overlay="#staticBackdrop">
                                                                 <i class="ri-delete-bin-line"></i>
                                                                 </button>
-                                                            </a>
+
+ 
+                                                                <div id="staticBackdrop" class="hs-overlay hidden ti-modal  [--overlay-backdrop:static]">
+                                                                        <div class="hs-overlay-open:mt-7 ti-modal-box mt-0 ease-out">
+                                                                            <div class="ti-modal-content">
+                                                                            <div class="ti-modal-header">
+                                                                                <h6 class="modal-title text-[1rem] font-semibold">The Vanishing Act.</h6>
+                                                                                    <button type="button" class="hs-dropdown-toggle !text-[1rem] !font-semibold !text-defaulttextcolor" data-hs-overlay="#staticBackdrop">
+                                                                                    <span class="sr-only">Close</span>
+                                                                                    <i class="ri-close-line"></i>
+                                                                                    </button>
+                                                                            </div>
+                                                                            <div class="ti-modal-body px-4">
+                                                                                <p>Hey there! Deleting this company is irreversible. Confirm if you're feeling brave!</p>
+                                                                            </div>
+                                                                            <div class="ti-modal-footer">
+                                                                                <button type="button"
+                                                                                class="hs-dropdown-toggle ti-btn  ti-btn-secondary-full align-middle"
+                                                                                data-hs-overlay="#staticBackdrop
+                                                                                ">
+                                                                                Close
+                                                                                </button>
+                                                                                <button type="button" class="ti-btn bg-danger text-white !font-medium" onclick="deleteCompany({{ $company['id'] }})">Understood</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -115,11 +141,10 @@
                         <!--End::row-1 -->
 
                         <!-- Start:: Contact Details Offcanvas -->
-                        
-                        
+                       
 <script type="text/javascript">
     function deleteCompany(id) {
-        if (confirm("Are you sure you want to delete this company?")) {
+    {
             let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
 
             $.ajax({
@@ -260,7 +285,5 @@
         }, 2000);
     }
 </script>
-
-
 
 @endsection

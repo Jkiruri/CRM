@@ -85,13 +85,42 @@
                                                         </td>
                                             
                                                         <td>
-                                                            <div class="btn-list">
+                                                                <div class="btn-list">
                                                                 
                                                                 <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-info ti-btn-icon"><i class="ri-pencil-line"></i></button>
-                                                                <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-danger ti-btn-icon contact-delete" onclick="deleteContact({{ $contact['id'] }})">
+                                                                
+                                                            <button aria-label="button" type="button" class="ti-btn ti-btn-sm ti-btn-danger ti-btn-icon contact-delete" data-hs-overlay="#staticBackdrop">
                                                                 <i class="ri-delete-bin-line"></i>
                                                                 </button>
-                                                            </a>
+
+ 
+                                                                <div id="staticBackdrop" class="hs-overlay hidden ti-modal  [--overlay-backdrop:static]">
+                                                                        <div class="hs-overlay-open:mt-7 ti-modal-box mt-0 ease-out">
+                                                                            <div class="ti-modal-content">
+                                                                            <div class="ti-modal-header">
+                                                                                <h6 class="modal-title text-[1rem] font-semibold">The Vanishing Act.</h6>
+                                                                                    <button type="button" class="hs-dropdown-toggle !text-[1rem] !font-semibold !text-defaulttextcolor" data-hs-overlay="#staticBackdrop">
+                                                                                    <span class="sr-only">Close</span>
+                                                                                    <i class="ri-close-line"></i>
+                                                                                    </button>
+                                                                            </div>
+                                                                            <div class="ti-modal-body px-4">
+                                                                                <p>Hey there! Deleting this contact is irreversible. Confirm if you're feeling brave!</p>
+                                                                            </div>
+                                                                            <div class="ti-modal-footer">
+                                                                                <button type="button"
+                                                                                class="hs-dropdown-toggle ti-btn  ti-btn-secondary-full align-middle"
+                                                                                data-hs-overlay="#staticBackdrop
+                                                                                ">
+                                                                                Close
+                                                                                </button>
+                                                                                <button type="button" class="ti-btn bg-danger text-white !font-medium" onclick="deleteContact({{ $contact['id'] }})">Understood</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                </div>
+
+
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -122,20 +151,25 @@
 
     <script type="text/javascript">
     function deleteContact(id) {
-        if (confirm("Are you sure you want to delete this contact?")) {
+        {
+            let sanctumToken = '{{ env('SANCTUM_TOKEN') }}';
+
             $.ajax({
                 url: 'http://127.0.0.1:8000/api/contacts/' + id,
                 type: 'DELETE',
                 headers: {
-                    'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Authorization': 'Bearer ' + sanctumToken
                 },
                 success: function (result) {
+                    // Handle success, e.g., show a message, reload the page
                     console.log('Contact deleted successfully:', result);
                     var alertDiv = '<div class="alert alert-primary shadow-sm">Record deleted successfully</div>';
-                    $('#your-alert-container').html(alertDiv);
-                    location.reload();
+                    $('#your-alert-container').html(alertDiv); // Replace '#your-alert-container' with the actual container where you want to show the alert
+                    location.reload(); // Reload the page
                 },
                 error: function (xhr, status, error) {
+                    // Handle error, e.g., show an alert or log the error
                     console.error('Error deleting contact:', xhr.responseText);
                 }
             });
