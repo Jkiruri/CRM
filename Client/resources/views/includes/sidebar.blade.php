@@ -207,7 +207,7 @@
               <!-- End::slide -->
               <li class="slide has-sub">
                 <a href="javascript:void(0);" class="side-menu__item">
-                  <i class="bx bx-box side-menu__icon"></i>
+                   <i class="bx bx-task side-menu__icon"></i>
                   <span class="side-menu__label">Deals</span>
                   <i class="fe fe-chevron-right side-menu__angle"></i>
                 </a>
